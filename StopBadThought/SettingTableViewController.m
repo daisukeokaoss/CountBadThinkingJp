@@ -52,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,9 +69,10 @@
         }else if(indexPath.row == 1){
             static NSString *CellIdentifier = @"isLocationSave";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            
-            // Configure the cell...
-            
+            return cell;
+        }else if(indexPath.row == 2){
+            static NSString *CellIdentifier = @"isTimeSaved";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             return cell;
         }
     }
