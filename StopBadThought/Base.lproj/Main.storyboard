@@ -59,6 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1018" y="174"/>
         </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="Unz-l4-fjc">
@@ -200,13 +201,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="浮かんだ嫌な考えを書いてください" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxJ-Gd-4DO">
-                                <rect key="frame" x="20" y="20" width="285" height="21"/>
+                                <rect key="frame" x="6" y="20" width="285" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="（必須ではありません）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1O-U4-QEJ">
-                                <rect key="frame" x="20" y="49" width="187" height="21"/>
+                                <rect key="frame" x="-6" y="47" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -219,7 +220,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-BG-ldZ" customClass="JSFlatButton">
-                                <rect key="frame" x="215" y="47" width="76" height="25"/>
+                                <rect key="frame" x="176" y="45" width="50" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="記録">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,10 +241,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmF-74-bGP" customClass="JSFlatButton">
+                                <rect key="frame" x="229" y="45" width="71" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelButtonClicked:" destination="yRt-b0-T6a" eventType="touchUpInside" id="dm2-iP-pDl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="CancelJSFlatButton" destination="XmF-74-bGP" id="so6-hu-tJ2"/>
                         <outlet property="DataTimeLabel" destination="Fvg-Mk-n5E" id="koZ-aX-X46"/>
                         <outlet property="LocationLabel" destination="nLt-Fl-zCQ" id="873-E5-F4A"/>
                         <outlet property="RecordButton" destination="DLi-BG-ldZ" id="UR4-Rg-aSs"/>
@@ -252,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDT-ON-aBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="277"/>
+            <point key="canvasLocation" x="1630" y="371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fm4-Al-xjg">

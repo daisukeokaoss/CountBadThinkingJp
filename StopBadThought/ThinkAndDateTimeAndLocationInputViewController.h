@@ -17,4 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *LocationLabel;
 @property (strong,nonatomic) NSDate *date;
 
+
+@property (weak, nonatomic) IBOutlet JSFlatButton *CancelJSFlatButton;
+
+
+
 @end

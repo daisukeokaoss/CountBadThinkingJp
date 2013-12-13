@@ -26,6 +26,8 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)CancelButtonClicked:(id)sender {
+}
 
 - (void)viewDidLoad
 {
@@ -38,6 +40,11 @@
     self.RecordButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     self.RecordButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     [self.RecordButton setFlatTitle:@"記録"];
+    
+    self.CancelJSFlatButton.buttonBackgroundColor = [UIColor colorWithRed:0.99f green:0.99f blue:0.00f alpha:1.00f];
+    self.CancelJSFlatButton.buttonForegroundColor = [UIColor colorWithRed:0.99f green:0.00f blue:0.00f alpha:1.00f];
+    self.CancelJSFlatButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    [self.CancelJSFlatButton setFlatTitle:@"キャンセル"];
     
     NSString *localeIdentifier = [[NSLocale currentLocale] localeIdentifier];
     
