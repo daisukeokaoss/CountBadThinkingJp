@@ -57,12 +57,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"DataRetainPeriodCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if(indexPath.section == 0){
+        if(indexPath.row == 0){
+           static NSString *CellIdentifier = @"DataRetainPeriodCell";
+           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
-    return cell;
+           return cell;
+        }else if(indexPath.row == 1){
+            static NSString *CellIdentifier = @"isLocationSave";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            // Configure the cell...
+            
+            return cell;
+        }
+    }
+    return nil;
 }
 
 /*
