@@ -25,6 +25,7 @@
 		C97096B61843175B00264B6D /* UIColor+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B21843175B00264B6D /* UIColor+JSFlatButton.m */; };
 		C97096B71843175B00264B6D /* UIImage+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B41843175B00264B6D /* UIImage+JSFlatButton.m */; };
 		C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */; };
+		C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6DE185B2902006D028B /* SettingTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		C97096B41843175B00264B6D /* UIImage+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSFlatButton.m"; sourceTree = "<group>"; };
 		C97096B8184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThinkAndDateTimeAndLocationInputViewController.h; sourceTree = "<group>"; };
 		C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThinkAndDateTimeAndLocationInputViewController.m; sourceTree = "<group>"; };
+		C9D2E6DD185B2902006D028B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		C9D2E6DE185B2902006D028B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				C9709439183B053300264B6D /* AppDelegate.h */,
 				C970943A183B053300264B6D /* AppDelegate.m */,
 				C970943C183B053300264B6D /* Main.storyboard */,
+				C9D2E6DD185B2902006D028B /* SettingTableViewController.h */,
+				C9D2E6DE185B2902006D028B /* SettingTableViewController.m */,
 				C97096B8184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.h */,
 				C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */,
 				C970943F183B053300264B6D /* ViewController.h */,
@@ -281,6 +286,7 @@
 				C97096B71843175B00264B6D /* UIImage+JSFlatButton.m in Sources */,
 				C97096B51843175B00264B6D /* JSFlatButton.m in Sources */,
 				C970943B183B053300264B6D /* AppDelegate.m in Sources */,
+				C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */,
 				C97096B61843175B00264B6D /* UIColor+JSFlatButton.m in Sources */,
 				C9709437183B053300264B6D /* main.m in Sources */,
 				C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */,
