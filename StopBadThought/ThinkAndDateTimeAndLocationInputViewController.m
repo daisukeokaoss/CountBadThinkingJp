@@ -8,6 +8,9 @@
 
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
 
+//ユーザーインポート
+#import "MyAnnotation.h"
+
 
 @interface ThinkAndDateTimeAndLocationInputViewController ()
 - (void)SetUpLocation;
@@ -96,7 +99,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     // 生成
-
+       [self.mv addAnnotation:
+        [[MyAnnotation alloc]initWithLocationCoordinate:CLLocationCoordinate2DMake(newLocation.coordinate.latitude,newLocation.coordinate.longitude)
+                                                       title:@"現在位置"
+                                                    subtitle:@""]];
 
     // 表示位置を設定（ここでは東京都庁の経度緯度を例としています）
     CLLocationCoordinate2D co = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);

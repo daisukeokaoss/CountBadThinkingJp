@@ -18,7 +18,7 @@
     return self.annotationSubtitle;
 }
 
-- (id)initWithLocationCoordinate:(CLLocationCoordinate2D) coordinate
+- (id)initWithLocationCoordinate:(CLLocationCoordinate2D)coordinate
                            title:(NSString *) annotationTitle subtitle:(NSString *) annotationSubtitle {
     self.coordinate = coordinate;
     self.annotationTitle = annotationTitle;

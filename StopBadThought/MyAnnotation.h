@@ -15,7 +15,7 @@
     //NSString *annotationSubtitle;
 }
 
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) NSString *annotationTitle;
 @property (nonatomic, strong) NSString *annotationSubtitle;
 - (id)initWithLocationCoordinate:(CLLocationCoordinate2D) coordinate
