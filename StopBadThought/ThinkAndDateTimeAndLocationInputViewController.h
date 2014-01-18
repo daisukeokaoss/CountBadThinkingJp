@@ -6,15 +6,28 @@
 //  Copyright (c) 2013年 ナノソフトウェア. All rights reserved.
 //
 
+
+
 #import "JSFlatButton.h"
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController
+
+@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate>
+@property (nonatomic,strong) CLLocationManager *locationManager;
+
+// 現在位置記録用
+@property (nonatomic) CLLocationDegrees _longitude;
+@property (nonatomic) CLLocationDegrees _latitude;
+
+
 @property (weak, nonatomic) IBOutlet UITextView *ThinkingDicription;
 @property (weak, nonatomic) IBOutlet JSFlatButton *RecordButton;
 @property (weak, nonatomic) IBOutlet UILabel *DataTimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *LocationLabel;
+
+@property (nonatomic,retain) IBOutlet MKMapView *mv;
 @property (strong,nonatomic) NSDate *date;
 
 
