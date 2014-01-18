@@ -29,6 +29,7 @@
 		C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6DE185B2902006D028B /* SettingTableViewController.m */; };
 		C9D2E6E5185B3321006D028B /* RetainDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6E4185B3321006D028B /* RetainDataViewController.m */; };
 		C9F47BA4188AED5D00D52E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F47BA3188AED5D00D52E1B /* MapKit.framework */; };
+		C9F47BA7188AF8A900D52E1B /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F47BA6188AF8A900D52E1B /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		C9D2E6E3185B3321006D028B /* RetainDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainDataViewController.h; sourceTree = "<group>"; };
 		C9D2E6E4185B3321006D028B /* RetainDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainDataViewController.m; sourceTree = "<group>"; };
 		C9F47BA3188AED5D00D52E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C9F47BA5188AF8A900D52E1B /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		C9F47BA6188AF8A900D52E1B /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				C9D2E6DE185B2902006D028B /* SettingTableViewController.m */,
 				C97096B8184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.h */,
 				C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */,
+				C9F47BA5188AF8A900D52E1B /* MyAnnotation.h */,
+				C9F47BA6188AF8A900D52E1B /* MyAnnotation.m */,
 				C970943F183B053300264B6D /* ViewController.h */,
 				C9709440183B053300264B6D /* ViewController.m */,
 				C97096AE1843175B00264B6D /* JSFlatButton */,
@@ -301,6 +306,7 @@
 				C970943B183B053300264B6D /* AppDelegate.m in Sources */,
 				C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */,
 				C97096B61843175B00264B6D /* UIColor+JSFlatButton.m in Sources */,
+				C9F47BA7188AF8A900D52E1B /* MyAnnotation.m in Sources */,
 				C9709437183B053300264B6D /* main.m in Sources */,
 				C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */,
 				C9D2E6E5185B3321006D028B /* RetainDataViewController.m in Sources */,
