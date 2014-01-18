@@ -78,7 +78,9 @@
 	//lonLabel.text = [NSString stringWithFormat:@"%f",_longitude];
 	//latLabel.text = [NSString stringWithFormat:@"%f",_latitude];
     self.mv.mapType = MKMapTypeStandard;
-    [self.mv setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+    [self.mv setUserTrackingMode:MKUserTrackingModeNone animated:YES];
+    
+    [self performSelectorOnMainThread:@selector(reloadMap) withObject:nil waitUntilDone:NO];
     
     
     
@@ -93,21 +95,36 @@
 		self.locationManager.delegate = self;
         
 		// 位置情報取得開始
+        self.RepeatLocationUpload = YES;
 		[self.locationManager startUpdatingLocation];
 	}
 }
 
+-(void)reloadMap
+{
+    [self.mv setRegion:self.mv.region animated:NO];
+    // 表示位置を設定（ここでは東京都庁の経度緯度を例としています）
+   // [self.mv reloadInputViews];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     // 生成
-       [self.mv addAnnotation:
+    if(self.RepeatLocationUpload == NO){
+        return;
+    }else{
+        self.RepeatLocationUpload = NO;
+    }
+    [self.mv addAnnotation:
         [[MyAnnotation alloc]initWithLocationCoordinate:CLLocationCoordinate2DMake(newLocation.coordinate.latitude,newLocation.coordinate.longitude)
                                                        title:@"現在位置"
                                                     subtitle:@""]];
+    [self.mv addAnnotation:
+     [[MyAnnotation alloc]initWithLocationCoordinate:CLLocationCoordinate2DMake(35.65533333,139.7486111)
+                                               title:@"東京タワー"
+                                            subtitle:@""]];
 
-    // 表示位置を設定（ここでは東京都庁の経度緯度を例としています）
+    
     CLLocationCoordinate2D co = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-   // co.latitude = newLocation.coordinate.latitude; // 経度
-    //co.longitude = newLocation.coordinate.longitude; // 緯度
     [self.mv setCenterCoordinate:co animated:NO];
     
     // 縮尺を指定

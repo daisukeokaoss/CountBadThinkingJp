@@ -15,7 +15,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate>
+@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>
 @property (nonatomic,strong) CLLocationManager *locationManager;
 
 // 現在位置記録用
@@ -32,6 +32,8 @@
 
 
 @property (weak, nonatomic) IBOutlet JSFlatButton *CancelJSFlatButton;
+
+@property bool RepeatLocationUpload;
 
 
 
