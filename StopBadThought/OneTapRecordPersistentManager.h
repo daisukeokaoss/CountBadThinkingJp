@@ -12,9 +12,25 @@
 //ユーザーインクルード
 #import "OneTapRecord.h"
 
+
+typedef enum{
+    PersistentPeriodInfinite,
+    PersistentPeriod_3_Years,
+    PersistentPeriod_1_Years,
+    PersistentPeriod_Half_Years,
+    PersistentPeriod_3_Month,
+    PersistentPeriod_1_Month
+    
+}TPersistentPeriod;
+
+
+
 @interface OneTapRecordPersistentManager : NSObject
 
-@property (nonatomic,strong) NSArray *TapRecordArray;
+@property (nonatomic,strong) NSMutableArray *TapRecordArray;
+
+-(void)OpenRecordArray;
+-(void)saveRecordArray;
 
 
 

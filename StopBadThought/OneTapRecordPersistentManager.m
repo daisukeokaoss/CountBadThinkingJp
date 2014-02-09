@@ -23,6 +23,10 @@
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     self.TapRecordArray = [ud objectForKey:@"TapHistory"];
+    
+    if(self.TapRecordArray == nil){
+        self.TapRecordArray = [[NSMutableArray alloc] init];
+    }
 }
 
 

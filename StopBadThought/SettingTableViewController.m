@@ -78,6 +78,9 @@
     }
     return nil;
 }
+- (IBAction)ReturnToMainButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.

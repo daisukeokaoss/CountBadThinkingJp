@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+
+//ユーザーインクルード
+#import "ThinkAndDateTimeAndLocationInputViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -25,6 +29,23 @@
     self.CountButtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.CountButtn setFlatTitle:@"嫌な考えが浮かんだら押してください!!"];
     [self.CountButtn setFlatImage:nil];
+    
+    [self.TapPersisitent OpenRecordArray];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.TapPersisitent saveRecordArray];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //Segueの特定
+    if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
+         ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
+        nextViewController.Record = self.TapPersisitent;
+    }
 }
 
 - (void)didReceiveMemoryWarning
