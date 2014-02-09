@@ -15,12 +15,22 @@
 #import <MapKit/MapKit.h>
 
 
-@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>
-@property (nonatomic,strong) CLLocationManager *locationManager;
+@interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>{
+    
+	// 現在位置記録用
+	CLLocationDegrees longitude;
+	CLLocationDegrees latitude;
+
+}
+@property (nonatomic,strong) CLLocationManager* locationManager;
+
+@property (nonatomic,weak) IBOutlet UILabel *lonLabel;
+@property (nonatomic,weak) IBOutlet UILabel *latLabel;
+
 
 // 現在位置記録用
-@property (nonatomic) CLLocationDegrees _longitude;
-@property (nonatomic) CLLocationDegrees _latitude;
+//@property (nonatomic) CLLocationDegrees _longitude;
+//@property (nonatomic) CLLocationDegrees _latitude;
 
 
 @property (weak, nonatomic) IBOutlet UITextView *ThinkingDicription;

@@ -230,7 +230,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付と時刻" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-Mk-n5E">
-                                <rect key="frame" x="20" y="232" width="280" height="21"/>
+                                <rect key="frame" x="20" y="187" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -249,6 +249,19 @@
                                 <rect key="frame" x="6" y="261" width="305" height="296"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longtitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soN-1Y-PuI">
+                                <rect key="frame" x="20" y="216" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGO-JT-W4L">
+                                <rect key="frame" x="20" y="240" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -257,12 +270,14 @@
                         <outlet property="DataTimeLabel" destination="Fvg-Mk-n5E" id="koZ-aX-X46"/>
                         <outlet property="RecordButton" destination="DLi-BG-ldZ" id="UR4-Rg-aSs"/>
                         <outlet property="ThinkingDicription" destination="dZt-Te-8UB" id="q7H-o5-iG6"/>
+                        <outlet property="latLabel" destination="fGO-JT-W4L" id="svr-x5-E9e"/>
+                        <outlet property="lonLabel" destination="soN-1Y-PuI" id="at7-G8-Je4"/>
                         <outlet property="mv" destination="8eJ-FO-Ml5" id="AhQ-KB-Urq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDT-ON-aBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="371"/>
+            <point key="canvasLocation" x="1970" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fm4-Al-xjg">

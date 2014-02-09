@@ -9,7 +9,7 @@
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
 
 //ユーザーインポート
-#import "MyAnnotation.h"
+
 
 
 @interface ThinkAndDateTimeAndLocationInputViewController ()
@@ -71,97 +71,51 @@
 }
 
 - (void)SetUpLocation
-//現在位置を出力する
+//現在位置取得をセットアップする
 {
-	//_longitude = 0.0;
-	//_latitude = 0.0;
-	//lonLabel.text = [NSString stringWithFormat:@"%f",_longitude];
-	//latLabel.text = [NSString stringWithFormat:@"%f",_latitude];
-    self.mv.mapType = MKMapTypeStandard;
-    [self.mv setUserTrackingMode:MKUserTrackingModeNone animated:YES];
+	longitude = 0.0;
+	latitude = 0.0;
+	self.lonLabel.text = [NSString stringWithFormat:@"%f",longitude];
+	self.latLabel.text = [NSString stringWithFormat:@"%f",latitude];
     
-    [self performSelectorOnMainThread:@selector(reloadMap) withObject:nil waitUntilDone:NO];
+    self.locationManager = [[CLLocationManager alloc] init];
     
+    BOOL locationServicesEnabled;
     
-    
-	// ロケーションマネージャーを作成
-	BOOL locationServicesEnabled;
-	self.locationManager = [[CLLocationManager alloc] init];
-
     locationServicesEnabled = [CLLocationManager locationServicesEnabled];
-	
     
-	if (locationServicesEnabled) {
-		self.locationManager.delegate = self;
-        
-		// 位置情報取得開始
-        self.RepeatLocationUpload = YES;
-		[self.locationManager startUpdatingLocation];
-	}
-}
-
--(void)reloadMap
-{
-    [self.mv setRegion:self.mv.region animated:NO];
-    // 表示位置を設定（ここでは東京都庁の経度緯度を例としています）
-   // [self.mv reloadInputViews];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    // 生成
-    if(self.RepeatLocationUpload == NO){
-        return;
-    }else{
-        self.RepeatLocationUpload = NO;
+    if (locationServicesEnabled) {
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
     }
-    [self.mv addAnnotation:
-        [[MyAnnotation alloc]initWithLocationCoordinate:CLLocationCoordinate2DMake(newLocation.coordinate.latitude,newLocation.coordinate.longitude)
-                                                       title:@"現在位置"
-                                                    subtitle:@""]];
-    [self.mv addAnnotation:
-     [[MyAnnotation alloc]initWithLocationCoordinate:CLLocationCoordinate2DMake(35.65533333,139.7486111)
-                                               title:@"東京タワー"
-                                            subtitle:@""]];
 
+
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+	// 位置情報更新
+{
     
-    CLLocationCoordinate2D co = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-    [self.mv setCenterCoordinate:co animated:NO];
+	longitude = newLocation.coordinate.longitude;
+	latitude = newLocation.coordinate.latitude;
     
-    // 縮尺を指定
-    MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(co, 1000, 1000);
-    [self.mv setRegion:cr animated:NO];
+	// 表示更新
+	self.lonLabel.text = [NSString stringWithFormat:@"%f",longitude];
+	self.latLabel.text = [NSString stringWithFormat:@"%f",latitude];
     
-   
-    
-    // addSubview
-    //[self.view addSubview:self.mv];
-    [self.locationManager stopUpdatingLocation];
+    MKPointAnnotation *cur = [[MKPointAnnotation alloc] init];
+    cur.title = @"現在位置";
+
+    //MKCoordinateSpan span = MKCoordinateSpanMake(0.005, 0.005);
+    //self.mv.region =MKCoordinateRegionMake(newLocation.coordinate, span);
+    cur.coordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    [self.mv showAnnotations:@[cur] animated:NO];
     
     
 }
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-	if (error) {
-		NSString* message = nil;
-		switch ([error code]) {
-                // アプリでの位置情報サービスが許可されていない場合
-			case kCLErrorDenied:
-				// 位置情報取得停止
-				[self.locationManager stopUpdatingLocation];
-				message = [NSString stringWithFormat:@"このアプリは位置情報サービスが許可されていません。"];
-				break;
-			default:
-				message = [NSString stringWithFormat:@"位置情報の取得に失敗しました。"];
-				break;
-		}
-		if (message) {
-			// アラートを表示
-			UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"" message:message delegate:nil
-                                                 cancelButtonTitle:@"OK" otherButtonTitles:nil] ;
-			[alert show];
-		}
-	}
-}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
