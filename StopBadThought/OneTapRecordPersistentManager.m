@@ -29,6 +29,17 @@
     }
 }
 
+-(int)CountTapRecordNumber
+//記録されているタップの数を返す
+{
+    return[self.TapRecordArray count];
+}
+
+//最後からX番目の日付を返すメソッド
+
+
+//ある一定以上前のデータを消去するメソッド
+
 
 
 @end
