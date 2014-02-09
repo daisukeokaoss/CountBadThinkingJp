@@ -28,10 +28,6 @@
 @property (nonatomic,weak) IBOutlet UILabel *latLabel;
 
 
-// 現在位置記録用
-//@property (nonatomic) CLLocationDegrees _longitude;
-//@property (nonatomic) CLLocationDegrees _latitude;
-
 
 @property (weak, nonatomic) IBOutlet UITextView *ThinkingDicription;
 @property (weak, nonatomic) IBOutlet JSFlatButton *RecordButton;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C916DF6318A7C99100BDDAE9 /* OneTapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */; };
 		C970942B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942C183B053300264B6D /* CoreGraphics.framework */; };
 		C970942F183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C916DF6118A7C99100BDDAE9 /* OneTapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTapRecord.h; sourceTree = "<group>"; };
+		C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTapRecord.m; sourceTree = "<group>"; };
 		C9709427183B053300264B6D /* StopBadThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopBadThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C970942A183B053300264B6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C970942C183B053300264B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */,
 				C970943F183B053300264B6D /* ViewController.h */,
 				C9709440183B053300264B6D /* ViewController.m */,
+				C916DF6118A7C99100BDDAE9 /* OneTapRecord.h */,
+				C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */,
 				C97096AE1843175B00264B6D /* JSFlatButton */,
 				C9709442183B053300264B6D /* Images.xcassets */,
 				C9709431183B053300264B6D /* Supporting Files */,
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9709441183B053300264B6D /* ViewController.m in Sources */,
+				C916DF6318A7C99100BDDAE9 /* OneTapRecord.m in Sources */,
 				C97096B71843175B00264B6D /* UIImage+JSFlatButton.m in Sources */,
 				C97096B51843175B00264B6D /* JSFlatButton.m in Sources */,
 				C970943B183B053300264B6D /* AppDelegate.m in Sources */,
