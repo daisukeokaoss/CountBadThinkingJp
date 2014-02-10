@@ -68,7 +68,7 @@
             static NSString *CellIdentifier = @"DatePlot";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             
-            cell.textLabel.text = [self.Record DateOfSpecifiedIndex:indexPath.row];
+           // cell.textLabel.text = [self.Record DateOfSpecifiedIndex:indexPath.row];
             
             
             
