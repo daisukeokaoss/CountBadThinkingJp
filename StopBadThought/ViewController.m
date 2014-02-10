@@ -11,6 +11,7 @@
 
 //ユーザーインクルード
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
+#import "HistoryPlotViewController.h"
 
 @interface ViewController ()
 
@@ -45,6 +46,11 @@
     if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
          ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
         nextViewController.Record = self.TapPersisitent;
+    }
+    if([[segue identifier] isEqualToString:@"HistoryPlot"]){
+        HistoryPlotViewController *nextViewController = [segue destinationViewController];
+        nextViewController.Record = self.TapPersisitent;
+        
     }
 }
 

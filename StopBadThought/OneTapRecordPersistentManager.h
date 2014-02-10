@@ -29,8 +29,18 @@ typedef enum{
 
 @property (nonatomic,strong) NSMutableArray *TapRecordArray;
 
+@property (nonatomic) TPersistentPeriod period;
+
 -(void)OpenRecordArray;
 -(void)saveRecordArray;
+
+-(int)CountTapRecordNumber;
+
+//最後からX番目の日付を返すメソッド
+-(NSString *)DateOfSpecifiedIndex:(NSInteger)index;
+
+//ある一定期間以上前のデータを消去するメソッド
+-(void)DeleteDataBeforeSpecifiedPeriod;
 
 
 

@@ -18,4 +18,6 @@
 @property (nonatomic,strong) NSDate *date;
 @property (nonatomic,strong) NSString *description;
 
+@property (nonatomic) BOOL deleteFlag;
+
 @end
