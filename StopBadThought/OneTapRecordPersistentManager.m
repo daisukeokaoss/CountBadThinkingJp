@@ -54,28 +54,32 @@
     int oneday = 60*60*24;
     int oneMonth = oneday*30;
     int oneYear = 365*oneday;
-
     
-    
+    int PersistentPeriod=0;
     if(self.period == PersistentPeriodInfinite){
         //永続的にデータを保持する
+        return;
     }else if(self.period == PersistentPeriod_3_Years){
         //３年間分データを保持する
-        for(OneTapRecord *obj in self.TapRecordArray){
-            NSDate *SpecifiedDate = [NSDate dateWithTimeIntervalSinceNow:oneYear*3];
-            if([[obj date] earlierDate:SpecifiedDate]){
-                [self.TapRecordArray removeObject:obj];
-            }
-        }
+        PersistentPeriod = oneYear * 3;
     }else if(self.period == PersistentPeriod_1_Years){
         //１年間分データを保持する
+        PersistentPeriod = oneYear;
     }else if(self.period == PersistentPeriod_Half_Years){
         //半年分データを保持する
-        
+        PersistentPeriod = oneYear/2;
     }else if(self.period == PersistentPeriod_3_Month){
         //３ヶ月間データを保持する
+        PersistentPeriod = oneMonth *3;
     }else if(self.period == PersistentPeriod_1_Month){
         //１ヶ月間データを保持する
+        PersistentPeriod = oneMonth * 1;
+    }
+    for(OneTapRecord *obj in self.TapRecordArray){
+        NSDate *SpecifiedDate = [NSDate dateWithTimeIntervalSinceNow:PersistentPeriod];
+        if([[obj date] earlierDate:SpecifiedDate]){
+            [self.TapRecordArray removeObject:obj];
+        }
     }
 }
 
