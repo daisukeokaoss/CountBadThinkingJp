@@ -50,7 +50,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ep0-gB-LEe" kind="modal" identifier="HistoryPlot" id="Bti-s1-6zc"/>
+                                    <segue destination="1oh-bL-L9g" kind="modal" identifier="" id="m76-Fl-UBE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,44 +157,33 @@
             <point key="canvasLocation" x="1227" y="941"/>
         </scene>
         <!--History Plot View Controller-->
-        <scene sceneID="E3S-0Z-5kn">
+        <scene sceneID="BjT-v9-8dd">
             <objects>
-                <tableViewController id="5RQ-rb-Wfv" customClass="HistoryPlotViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0EV-QW-eK9">
+                <tableViewController id="qNq-1s-W7v" customClass="HistoryPlotViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0uU-9C-RuM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DatePlot" textLabel="ZGd-Mf-xAv" style="IBUITableViewCellStyleDefault" id="pij-xM-2kq">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DatePlot" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ey5-y4-gn3">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pij-xM-2kq" id="icK-IM-rKA">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DatePlot" tableViewCell="ey5-y4-gn3" id="xGf-z3-cHV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZGd-Mf-xAv">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="5RQ-rb-Wfv" id="pFZ-oo-Y9e"/>
-                            <outlet property="delegate" destination="5RQ-rb-Wfv" id="XLo-0A-b79"/>
+                            <outlet property="dataSource" destination="qNq-1s-W7v" id="pND-xF-zTP"/>
+                            <outlet property="delegate" destination="qNq-1s-W7v" id="nQR-38-bGv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="M1L-OP-dSu">
-                        <barButtonItem key="leftBarButtonItem" title="戻る" id="y3F-jA-h7s"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="OCj-BT-4rU"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OXr-F1-nZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S8-Tr-8Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2370" y="842"/>
+            <point key="canvasLocation" x="2415" y="775"/>
         </scene>
         <!--Think And Date Time And Location Input View Controller-->
         <scene sceneID="Qw1-ag-DtO">
@@ -306,22 +295,22 @@
             <point key="canvasLocation" x="324" y="737"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="T1n-at-Idu">
+        <scene sceneID="7rq-to-Xxi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ep0-gB-LEe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1oh-bL-L9g" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBZ-h0-eE0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSm-5J-zjG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5RQ-rb-Wfv" kind="relationship" relationship="rootViewController" id="3ca-iB-hRH"/>
+                        <segue destination="qNq-1s-W7v" kind="relationship" relationship="rootViewController" id="Ugd-rj-fga"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="coI-xk-Swz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G37-3Y-I6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="842"/>
+            <point key="canvasLocation" x="1889" y="775"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

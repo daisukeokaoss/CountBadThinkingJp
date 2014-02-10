@@ -51,23 +51,36 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.Record CountTapRecordNumber];
+    //return [self.Record CountTapRecordNumber];
     // Return the number of rows in the section.
-    //return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //if([self.Record CountTapRecordNumber] == 0){
+    //    return nil;
+    //}
+    
+    
+    if(indexPath.section ==0){
+        if(indexPath.row == 0){
+            static NSString *CellIdentifier = @"DatePlot";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            cell.textLabel.text = [self.Record DateOfSpecifiedIndex:indexPath.row];
+            
+            
+            
+            // Configure the cell...
+            
+            return cell;
+        }
+    }
+    
+    return nil;
+   
 
-    static NSString *CellIdentifier = @"DatePlot";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.text = [self.Record DateOfSpecifiedIndex:indexPath.row];
-
-    
-    // Configure the cell...
-    
-    return cell;
 }
 
 /*
