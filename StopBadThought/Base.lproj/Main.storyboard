@@ -33,8 +33,8 @@
                                     <segue destination="yRt-b0-T6a" kind="modal" identifier="BadThoughtHappen" id="owD-jH-ina"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-8R-4BV">
-                                <rect key="frame" x="108" y="475" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-8R-4BV" customClass="JSFlatButton">
+                                <rect key="frame" x="60" y="317" width="104" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="設定">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,10 +43,10 @@
                                     <segue destination="s3x-hC-2Lc" kind="modal" id="Hah-vw-x9J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-08-KoK">
-                                <rect key="frame" x="232" y="475" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-08-KoK" customClass="JSFlatButton">
+                                <rect key="frame" x="172" y="317" width="107" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="履歴">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -58,6 +58,8 @@
                     </view>
                     <connections>
                         <outlet property="CountButtn" destination="JUi-3u-Ls6" id="Bso-i3-1Xq"/>
+                        <outlet property="HistoryButton" destination="2Uh-08-KoK" id="L3t-xL-84i"/>
+                        <outlet property="SettingButton" destination="vfF-8R-4BV" id="8eW-Cx-0qs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
