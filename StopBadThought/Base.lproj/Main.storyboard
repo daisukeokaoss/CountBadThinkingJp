@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="1227" y="941"/>
         </scene>
-        <!--History Plot View Controller-->
+        <!--History Plot View Controller - 履歴-->
         <scene sceneID="BjT-v9-8dd">
             <objects>
                 <tableViewController id="qNq-1s-W7v" customClass="HistoryPlotViewController" sceneMemberID="viewController">
@@ -188,7 +188,13 @@
                             <outlet property="delegate" destination="qNq-1s-W7v" id="nQR-38-bGv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OCj-BT-4rU"/>
+                    <navigationItem key="navigationItem" title="履歴" id="OCj-BT-4rU">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="ZW8-tx-Tzi">
+                            <connections>
+                                <action selector="ReturnButtonTap:" destination="qNq-1s-W7v" id="Kn8-B7-B6o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S8-Tr-8Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
