@@ -31,9 +31,20 @@
 }
 - (IBAction)RecordButtonClicked:(id)sender
 {
+    OneTapRecord *onetap = [[OneTapRecord alloc] init];
+    onetap.longitude = longitude;
+    onetap.latitude  = latitude;
+    onetap.date = [NSDate date];
+    onetap.description = self.ThinkingDicription.text;
+    onetap.deleteFlag = false;
+    
+    [self.Record.TapRecordArray addObject:onetap];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-- (IBAction)CancelButtonClicked:(id)sender {
+- (IBAction)CancelButtonClicked:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad

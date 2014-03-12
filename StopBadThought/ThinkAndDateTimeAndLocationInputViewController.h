@@ -15,6 +15,7 @@
 #import <MapKit/MapKit.h>
 
 #import "OneTapRecordPersistentManager.h"
+#import "OneTapRecord.h"
 
 
 @interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>{
