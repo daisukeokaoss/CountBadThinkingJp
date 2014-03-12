@@ -83,6 +83,8 @@
     
     BOOL locationServicesEnabled;
     
+    self.OneTimeExec = true;
+    
     locationServicesEnabled = [CLLocationManager locationServicesEnabled];
     
     if (locationServicesEnabled) {
@@ -95,19 +97,22 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 	// 位置情報更新
 {
+    if(self.OneTimeExec == true){
+        self.OneTimeExec = false;
+    }else{
+        return;
+    }
     
 	longitude = newLocation.coordinate.longitude;
 	latitude = newLocation.coordinate.latitude;
     
 	// 表示更新
-	self.lonLabel.text = [NSString stringWithFormat:@"%f",longitude];
-	self.latLabel.text = [NSString stringWithFormat:@"%f",latitude];
+	self.lonLabel.text = [NSString stringWithFormat:@"%.3f",longitude];
+	self.latLabel.text = [NSString stringWithFormat:@"%.3f",latitude];
     
     MKPointAnnotation *cur = [[MKPointAnnotation alloc] init];
     cur.title = @"現在位置";
 
-    //MKCoordinateSpan span = MKCoordinateSpanMake(0.005, 0.005);
-    //self.mv.region =MKCoordinateRegionMake(newLocation.coordinate, span);
     cur.coordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     [self.mv showAnnotations:@[cur] animated:NO];
     

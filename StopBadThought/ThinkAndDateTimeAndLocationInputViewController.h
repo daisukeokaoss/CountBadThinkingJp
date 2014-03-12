@@ -45,6 +45,8 @@
 
 @property bool RepeatLocationUpload;
 
+@property bool OneTimeExec ;
+
 
 
 @end
