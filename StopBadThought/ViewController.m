@@ -25,9 +25,8 @@
     
     
     //「嫌な考えが浮かんだら押してください！！」ボタンの設定
-	// Do any additional setup after loading the view, typically from a nib.
-    self.CountButtn.buttonBackgroundColor = [UIColor colorWithRed:0.74f green:0.21f blue:0.18f alpha:1.00f]; //[UIColor colorWithRed:231.0f/255.0f green:110.0f/255.0f blue:121.0f/255.0f alpha:1.0f];
-    self.CountButtn.buttonForegroundColor = [UIColor colorWithRed:255.0f/255.0f green:246.0f/255.0f blue:150.0f/255.0f alpha:1.0f]; //[UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
+    self.CountButtn.buttonBackgroundColor = [UIColor colorWithRed:0.74f green:0.21f blue:0.18f alpha:1.00f];
+    self.CountButtn.buttonForegroundColor = [UIColor colorWithRed:255.0f/255.0f green:246.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
     self.CountButtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:15.0f];
     self.CountButtn.titleLabel.numberOfLines = 2;
     self.CountButtn.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -43,11 +42,9 @@
     [self.CountButtn setFlatImage:nil];
     
     //「履歴」ボタンの設定
-    self.HistoryButton.buttonBackgroundColor = [UIColor colorWithRed:0.32f green:0.64f blue:0.32f alpha:1.00f]; //[UIColor colorWithHue:0.0f saturation:0.0f brightness:0.60f alpha:1.0f];
+    self.HistoryButton.buttonBackgroundColor = [UIColor colorWithRed:0.32f green:0.64f blue:0.32f alpha:1.00f];
     self.HistoryButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     self.HistoryButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];;
-    //self.HistoryButton.titleLabel.numberOfLines = 2;
-    //self.HistoryButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.HistoryButton setFlatTitle:@"履歴"];
     [self.HistoryButton setFlatImage:nil];
     
