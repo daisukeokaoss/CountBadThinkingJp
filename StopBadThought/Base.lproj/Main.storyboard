@@ -59,6 +59,7 @@
                     <connections>
                         <outlet property="CountButtn" destination="JUi-3u-Ls6" id="Bso-i3-1Xq"/>
                         <outlet property="HistoryButton" destination="2Uh-08-KoK" id="L3t-xL-84i"/>
+                        <outlet property="PlotBadThoughtCountLabel" destination="iS0-Va-Qjl" id="LuU-lC-q8g"/>
                         <outlet property="SettingButton" destination="vfF-8R-4BV" id="8eW-Cx-0qs"/>
                     </connections>
                 </viewController>

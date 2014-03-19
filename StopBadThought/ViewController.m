@@ -48,9 +48,22 @@
     [self.HistoryButton setFlatTitle:@"履歴"];
     [self.HistoryButton setFlatImage:nil];
     
+    if(self.TapPersisitent == nil){
+        self.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
     
     
     [self.TapPersisitent OpenRecordArray];
+    
+    
+    //「悪い考えは●回浮かびました」を表示
+    //self.PlotBadThoughtCountLabel.text = [NSString stringWithFormat:@"今日悪い考えは%d回浮かびました",[self CheckAndCountTodaysBadthoughtCount]];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    //「悪い考えは●回浮かびました」を表示
+    self.PlotBadThoughtCountLabel.text = [NSString stringWithFormat:@"今日悪い考えは%d回浮かびました",[self CheckAndCountTodaysBadthoughtCount]];
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -64,13 +77,31 @@
     //Segueの特定
     if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
          ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
-        nextViewController.Record = self.TapPersisitent;
+        if(nextViewController.Record == nil){
+               nextViewController.Record = self.TapPersisitent ;
+        }
     }
     if([[segue identifier] isEqualToString:@"HistoryPlot"]){
         HistoryPlotViewController *nextViewController = [segue destinationViewController];
-        nextViewController.Record = self.TapPersisitent;
+        if(nextViewController.Record ==nil){
+               nextViewController.Record = self.TapPersisitent;
+        }
         
     }
+}
+
+-(int)CheckAndCountTodaysBadthoughtCount
+{
+    //self.TapPersisitent.TapRecordArray
+    int CountTodaysBadThought = 0;
+    for(int i=0;i<self.TapPersisitent.TapRecordArray.count;i++){
+        OneTapRecord *Cursor =  self.TapPersisitent.TapRecordArray[i];
+        NSDate *today = [NSDate date];
+        if([today isEqualToDate:Cursor.date]){
+            CountTodaysBadThought++;
+        }
+    }
+    return CountTodaysBadThought;
 }
 
 - (void)didReceiveMemoryWarning

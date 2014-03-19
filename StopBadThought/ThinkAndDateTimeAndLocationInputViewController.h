@@ -42,7 +42,7 @@
 
 @property (weak, nonatomic) IBOutlet JSFlatButton *CancelJSFlatButton;
 
-@property (weak,nonatomic) OneTapRecordPersistentManager *Record;
+@property (strong,nonatomic) OneTapRecordPersistentManager *Record;
 
 @property bool RepeatLocationUpload;
 

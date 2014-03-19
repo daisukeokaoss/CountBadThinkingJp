@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet JSFlatButton *SettingButton;
 @property (weak, nonatomic) IBOutlet JSFlatButton *HistoryButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *PlotBadThoughtCountLabel;
 
 
 @end
