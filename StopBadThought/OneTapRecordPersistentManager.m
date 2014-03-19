@@ -38,7 +38,7 @@
     NSData *OpenData = [ud dataForKey:@"TapHistory"];
     self.TapRecordArray = [NSKeyedUnarchiver unarchiveObjectWithData: OpenData];
     
-    self.TapRecordArray = [ud objectForKey:@"TapHistory"];
+    //self.TapRecordArray = [ud objectForKey:@"TapHistory"];
     
     if(self.TapRecordArray == nil){
         self.TapRecordArray = [[NSMutableArray alloc] init];

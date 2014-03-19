@@ -105,14 +105,20 @@
     AppDelegate *appdelegate;
     appdelegate = [[UIApplication sharedApplication] delegate];
     
-    if(appdelegate == nil){
+    if(appdelegate.TapPersisitent == nil){
         appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
     }
     int CountTodaysBadThought = 0;
     for(int i=0;i<appdelegate.TapPersisitent.TapRecordArray.count;i++){
-        OneTapRecord *Cursor =  appdelegate.TapPersisitent.TapRecordArray[i];
-        NSDate *today = [NSDate date];
-        if([today isEqualToDate:Cursor.date]){
+        OneTapRecord *Cursor =  [appdelegate.TapPersisitent.TapRecordArray objectAtIndex:i];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy/MM/dd"];
+        [formatter setLocale:[NSLocale systemLocale]];
+        [formatter setTimeZone:[NSTimeZone systemTimeZone]];
+        NSString *CursorDate = [formatter stringFromDate:Cursor.date];
+        NSString *Today      = [formatter stringFromDate:[NSDate date]];
+        
+        if([CursorDate isEqualToString:Today]){
             CountTodaysBadThought++;
         }
     }
