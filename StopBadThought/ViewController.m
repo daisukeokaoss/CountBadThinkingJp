@@ -118,6 +118,7 @@
         NSString *CursorDate = [formatter stringFromDate:Cursor.date];
         NSString *Today      = [formatter stringFromDate:[NSDate date]];
         
+        
         if([CursorDate isEqualToString:Today]){
             CountTodaysBadThought++;
         }
