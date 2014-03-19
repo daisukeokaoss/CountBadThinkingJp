@@ -12,6 +12,7 @@
 //ユーザーインクルード
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
 #import "HistoryPlotViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -48,12 +49,15 @@
     [self.HistoryButton setFlatTitle:@"履歴"];
     [self.HistoryButton setFlatImage:nil];
     
-    if(self.TapPersisitent == nil){
-        self.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
     }
     
+    [appdelegate.TapPersisitent OpenRecordArray];
     
-    [self.TapPersisitent OpenRecordArray];
     
     
     //「悪い考えは●回浮かびました」を表示
@@ -69,33 +73,44 @@
 -(void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [self.TapPersisitent saveRecordArray];
+    
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    [appdelegate.TapPersisitent saveRecordArray];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //Segueの特定
     if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
          ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
-        if(nextViewController.Record == nil){
-               nextViewController.Record = self.TapPersisitent ;
-        }
+       
     }
     if([[segue identifier] isEqualToString:@"HistoryPlot"]){
         HistoryPlotViewController *nextViewController = [segue destinationViewController];
-        if(nextViewController.Record ==nil){
-               nextViewController.Record = self.TapPersisitent;
-        }
+        
         
     }
-}
+}*/
 
 -(int)CheckAndCountTodaysBadthoughtCount
 {
-    //self.TapPersisitent.TapRecordArray
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
     int CountTodaysBadThought = 0;
-    for(int i=0;i<self.TapPersisitent.TapRecordArray.count;i++){
-        OneTapRecord *Cursor =  self.TapPersisitent.TapRecordArray[i];
+    for(int i=0;i<appdelegate.TapPersisitent.TapRecordArray.count;i++){
+        OneTapRecord *Cursor =  appdelegate.TapPersisitent.TapRecordArray[i];
         NSDate *today = [NSDate date];
         if([today isEqualToDate:Cursor.date]){
             CountTodaysBadThought++;

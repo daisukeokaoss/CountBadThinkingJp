@@ -17,6 +17,8 @@
 #import "OneTapRecordPersistentManager.h"
 #import "OneTapRecord.h"
 
+#import "AppDelegate.h"
+
 
 @interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>{
     
@@ -42,7 +44,7 @@
 
 @property (weak, nonatomic) IBOutlet JSFlatButton *CancelJSFlatButton;
 
-@property (strong,nonatomic) OneTapRecordPersistentManager *Record;
+//@property (strong,nonatomic) OneTapRecordPersistentManager *Record;
 
 @property bool RepeatLocationUpload;
 

@@ -37,8 +37,15 @@
     onetap.date = [NSDate date];
     onetap.description = self.ThinkingDicription.text;
     onetap.deleteFlag = false;
+
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
     
-    [self.Record.TapRecordArray addObject:onetap];
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    [appdelegate.TapPersisitent.TapRecordArray addObject:onetap];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

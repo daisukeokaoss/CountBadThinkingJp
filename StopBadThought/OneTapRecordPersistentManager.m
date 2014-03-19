@@ -8,13 +8,23 @@
 
 #import "OneTapRecordPersistentManager.h"
 
+
+//ユーザーインポート
+
+
 @implementation OneTapRecordPersistentManager
 
 -(void)saveRecordArray
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
-    [ud setObject:self.TapRecordArray forKey:@"TapHistory"];
+    [ud setInteger:self.TapRecordArray.count forKey:@"TapHistoryCount"];
+    
+    
+    NSData *saveData = [NSKeyedArchiver archivedDataWithRootObject:self.TapRecordArray];
+    [ud setObject:saveData forKey:@"TapHistory"];
+    
+    //[ud setObject:self.TapRecordArray forKey:@"TapHistory"];
     
     [ud synchronize];
 }
@@ -22,6 +32,12 @@
 -(void)OpenRecordArray
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    //int count = [ud integerForKey:@"TapHistoryCount"];
+    
+    NSData *OpenData = [ud dataForKey:@"TapHistory"];
+    self.TapRecordArray = [NSKeyedUnarchiver unarchiveObjectWithData: OpenData];
+    
     self.TapRecordArray = [ud objectForKey:@"TapHistory"];
     
     if(self.TapRecordArray == nil){

@@ -11,9 +11,10 @@
 
 //ユーザーインクルード
 #import "OneTapRecordPersistentManager.h"
+#import "AppDelegate.h"
 
 @interface HistoryPlotViewController : UITableViewController
 
-@property (nonatomic,weak) OneTapRecordPersistentManager *Record;
+//@property (nonatomic,weak) OneTapRecordPersistentManager *Record;
 
 @end

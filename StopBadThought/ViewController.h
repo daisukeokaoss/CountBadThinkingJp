@@ -16,7 +16,7 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet JSFlatButton *CountButtn;
 
-@property (strong,nonatomic) OneTapRecordPersistentManager *TapPersisitent;
+
 
 @property (weak, nonatomic) IBOutlet JSFlatButton *SettingButton;
 @property (weak, nonatomic) IBOutlet JSFlatButton *HistoryButton;

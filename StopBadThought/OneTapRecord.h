@@ -11,7 +11,7 @@
 //以下、ユーザーインクルード
 #import <CoreLocation/CoreLocation.h>
 
-@interface OneTapRecord : NSObject
+@interface OneTapRecord : NSObject<NSCoding>
 
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDegrees latitude;

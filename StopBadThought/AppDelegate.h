@@ -6,10 +6,15 @@
 //  Copyright (c) 2013年 ナノソフトウェア. All rights reserved.
 //
 
+#include "OneTapRecordPersistentManager.h"
+
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+@property (strong,nonatomic) OneTapRecordPersistentManager *TapPersisitent;
 
 @end
