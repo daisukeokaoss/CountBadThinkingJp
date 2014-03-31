@@ -72,6 +72,19 @@
 {
     static NSString *CellIdentifier = @"DatePlot";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日HH時mm分ss秒"];
+    OneTapRecord *onetap = [appdelegate.TapPersisitent.TapRecordArray objectAtIndex:indexPath.section];
+    
+    cell.textLabel.text = [formatter stringFromDate:onetap.date];
             
     return cell;
 
