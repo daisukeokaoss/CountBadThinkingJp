@@ -14,8 +14,11 @@
 #import "AppDelegate.h"
 #import "OneTapRecordPlotViewController.h"
 
+#import <CoreLocation/CoreLocation.h>
+
 @interface HistoryPlotViewController : UITableViewController
 
-//@property (nonatomic,weak) OneTapRecordPersistentManager *Record;
+
+
 
 @end

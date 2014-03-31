@@ -10,6 +10,16 @@
 
 @interface HistoryPlotViewController ()
 
+
+
+//以下、OneTapRecordPlotViewControllerに伝達するためのプロパティ
+@property (nonatomic) CLLocationDegrees longitude;  //経度
+@property (nonatomic) CLLocationDegrees latitude;   //緯度
+@property (nonatomic,strong) NSDate *date;
+@property (nonatomic,strong) NSString *description;
+
+
+
 @end
 
 @implementation HistoryPlotViewController
@@ -101,8 +111,14 @@
      */
     if([[segue identifier] isEqualToString:@"ShowOneTapRecordPlot"]){
         OneTapRecordPlotViewController *nextViewController = [segue destinationViewController];
+        nextViewController.LogtitudeLabel.text =[NSString stringWithFormat:@"%@",self.longitude];
         
     }
+    
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
 }
 
