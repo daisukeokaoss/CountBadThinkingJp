@@ -93,6 +93,17 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
+    /*
+     if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
+     ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
+     
+     }
+     */
+    if([[segue identifier] isEqualToString:@"ShowOneTapRecordPlot"]){
+        OneTapRecordPlotViewController *nextViewController = [segue destinationViewController];
+        
+    }
+    
 }
 
 /*

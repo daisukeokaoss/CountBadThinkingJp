@@ -12,6 +12,7 @@
 //ユーザーインクルード
 #import "OneTapRecordPersistentManager.h"
 #import "AppDelegate.h"
+#import "OneTapRecordPlotViewController.h"
 
 @interface HistoryPlotViewController : UITableViewController
 

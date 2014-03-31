@@ -185,7 +185,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="NPr-F6-W9H" kind="modal" id="8PR-3i-2UL"/>
+                                    <segue destination="NPr-F6-W9H" kind="modal" identifier="ShowOneTapRecordPlot" id="8PR-3i-2UL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
