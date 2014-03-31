@@ -50,7 +50,15 @@
 {
     
     // Return the number of sections.
-    return 1;
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    return appdelegate.TapPersisitent.TapRecordArray.count;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -62,28 +70,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //if([self.Record CountTapRecordNumber] == 0){
-    //    return nil;
-    //}
-    
-    
-    if(indexPath.section ==0){
-        if(indexPath.row == 0){
-            static NSString *CellIdentifier = @"DatePlot";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"DatePlot";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             
-           // cell.textLabel.text = [self.Record DateOfSpecifiedIndex:indexPath.row];
-            
-            
-            
-            // Configure the cell...
-            
-            return cell;
-        }
-    }
-    
-    return nil;
-   
+    return cell;
 
 }
 
