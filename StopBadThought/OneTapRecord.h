@@ -16,7 +16,7 @@
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDegrees latitude;
 @property (nonatomic,strong) NSDate *date;
-@property (nonatomic,strong) NSString *description;
+@property (nonatomic,strong) NSMutableString *description;
 
 @property (nonatomic) BOOL deleteFlag;
 
