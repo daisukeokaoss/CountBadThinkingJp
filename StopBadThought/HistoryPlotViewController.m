@@ -19,6 +19,9 @@
 @property (nonatomic,strong) NSString *description;
 
 
+@property (nonatomic) NSInteger CellIndex;
+
+
 
 @end
 
@@ -110,16 +113,34 @@
      }
      */
     if([[segue identifier] isEqualToString:@"ShowOneTapRecordPlot"]){
-        OneTapRecordPlotViewController *nextViewController = [segue destinationViewController];
-        nextViewController.LogtitudeLabel.text =[NSString stringWithFormat:@"%@",self.longitude];
+        //OneTapRecordPlotViewController *nextViewController = [segue destinationViewController];
+        AppDelegate *appdelegate;
+        appdelegate = [[UIApplication sharedApplication] delegate];
+        
+        if(appdelegate.TapPersisitent == nil){
+            appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+        }
+        
+        appdelegate.HistryPlotViewController_CurrentSelectedCellIndex = self.CellIndex;
+
+        
         
     }
     
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
     
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    appdelegate.HistryPlotViewController_CurrentSelectedCellIndex = indexPath.section;
+    
+    [self performSegueWithIdentifier:@"ShowOneTapRecordPlot" sender:self];
 }
 
 /*

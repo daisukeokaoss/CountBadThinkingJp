@@ -10,7 +10,13 @@
 
 #import <MapKit/MapKit.h>
 
+#import <CoreLocation/CoreLocation.h>
+
+#import "AppDelegate.h"
+
 @interface OneTapRecordPlotViewController : UIViewController
+
+
 @property (weak, nonatomic) IBOutlet UILabel *LogtitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *LatutudeLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *PlotMapView;

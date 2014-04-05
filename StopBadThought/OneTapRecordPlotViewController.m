@@ -31,6 +31,30 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    OneTapRecord *onetap = [appdelegate.TapPersisitent.TapRecordArray objectAtIndex:appdelegate.HistryPlotViewController_CurrentSelectedCellIndex];
+    
+    self.LatutudeLabel.text = [NSString stringWithFormat:@"%f",onetap.latitude];
+    self.LogtitudeLabel.text = [NSString stringWithFormat:@"%f",onetap.longitude];
+    self.Description.text = onetap.description;
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日HH時mm分ss秒"];
+    
+    self.Date.text = [formatter stringFromDate:onetap.date];
+    
+    MKPointAnnotation *cur = [[MKPointAnnotation alloc] init];
+    cur.title = @"現在位置";
+    
+    cur.coordinate = CLLocationCoordinate2DMake(onetap.latitude, onetap.longitude);
+    [self.PlotMapView showAnnotations:@[cur] animated:NO];
 }
 - (IBAction)ReturnButton:(id)sender
 {

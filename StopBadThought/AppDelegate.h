@@ -17,4 +17,6 @@
 
 @property (strong,nonatomic) OneTapRecordPersistentManager *TapPersisitent;
 
+@property (nonatomic) NSInteger HistryPlotViewController_CurrentSelectedCellIndex;
+
 @end
