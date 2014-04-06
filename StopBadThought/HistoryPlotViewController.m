@@ -103,31 +103,6 @@
 
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    /*
-     if ( [[segue identifier] isEqualToString:@"BadThoughtHappen"] ) {
-     ThinkAndDateTimeAndLocationInputViewController *nextViewController = [segue destinationViewController];
-     
-     }
-     */
-    if([[segue identifier] isEqualToString:@"ShowOneTapRecordPlot"]){
-        //OneTapRecordPlotViewController *nextViewController = [segue destinationViewController];
-        AppDelegate *appdelegate;
-        appdelegate = [[UIApplication sharedApplication] delegate];
-        
-        if(appdelegate.TapPersisitent == nil){
-            appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
-        }
-        
-        appdelegate.HistryPlotViewController_CurrentSelectedCellIndex = self.CellIndex;
-
-        
-        
-    }
-    
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

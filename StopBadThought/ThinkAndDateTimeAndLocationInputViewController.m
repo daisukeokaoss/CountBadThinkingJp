@@ -35,7 +35,7 @@
     onetap.longitude = longitude;
     onetap.latitude  = latitude;
     onetap.date = [NSDate date];
-    onetap.description = [self.ThinkingDicription.text copy];
+    onetap.description = [self.ThinkingDicription.text mutableCopy];
     onetap.deleteFlag = false;
 
     AppDelegate *appdelegate;

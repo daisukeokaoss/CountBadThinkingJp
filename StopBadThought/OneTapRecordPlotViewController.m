@@ -43,7 +43,7 @@
     
     self.LatutudeLabel.text = [NSString stringWithFormat:@"%f",onetap.latitude];
     self.LogtitudeLabel.text = [NSString stringWithFormat:@"%f",onetap.longitude];
-    self.Description.text = [onetap.description copy];
+    self.Description.text = [onetap.description mutableCopy];
 
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy年MM月dd日HH時mm分ss秒"];
