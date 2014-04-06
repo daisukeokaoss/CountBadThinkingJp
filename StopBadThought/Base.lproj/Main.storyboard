@@ -159,6 +159,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="f8S-zx-0oO"/>
+                    <connections>
+                        <outlet property="PersistentPeriodPicker" destination="3YV-S5-Zme" id="qcz-fx-k9F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABd-2l-65F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

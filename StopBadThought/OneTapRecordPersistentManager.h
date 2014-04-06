@@ -13,15 +13,15 @@
 #import "OneTapRecord.h"
 
 
-typedef enum{
-    PersistentPeriodInfinite,
+ enum{
+    PersistentPeriodInfinite=1,
     PersistentPeriod_3_Years,
     PersistentPeriod_1_Years,
     PersistentPeriod_Half_Years,
     PersistentPeriod_3_Month,
     PersistentPeriod_1_Month
     
-}TPersistentPeriod;
+};
 
 
 
@@ -29,7 +29,7 @@ typedef enum{
 
 @property (nonatomic,strong) NSMutableArray *TapRecordArray;
 
-@property (nonatomic) TPersistentPeriod period;
+@property (nonatomic) int period;
 
 -(void)OpenRecordArray;
 -(void)saveRecordArray;

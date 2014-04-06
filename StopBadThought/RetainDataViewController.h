@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RetainDataViewController : UIViewController <UIPickerViewDelegate>
+@property (weak, nonatomic) IBOutlet UIPickerView *PersistentPeriodPicker;
+
 
 @end

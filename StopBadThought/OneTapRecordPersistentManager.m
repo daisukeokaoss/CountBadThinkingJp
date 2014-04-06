@@ -23,6 +23,7 @@
     
     NSData *saveData = [NSKeyedArchiver archivedDataWithRootObject:self.TapRecordArray];
     [ud setObject:saveData forKey:@"TapHistory"];
+    [ud setInteger:self.period forKey:@"PersistentPeriod"];
     
     //[ud setObject:self.TapRecordArray forKey:@"TapHistory"];
     
@@ -36,6 +37,7 @@
     //int count = [ud integerForKey:@"TapHistoryCount"];
     
     NSData *OpenData = [ud dataForKey:@"TapHistory"];
+    self.period = [ud integerForKey:@"PersistentPeriod"];
     self.TapRecordArray = [NSKeyedUnarchiver unarchiveObjectWithData: OpenData];
     
     //self.TapRecordArray = [ud objectForKey:@"TapHistory"];

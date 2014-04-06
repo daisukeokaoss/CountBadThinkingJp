@@ -8,6 +8,9 @@
 
 #import "RetainDataViewController.h"
 
+//ユーザーインクルード
+#include "AppDelegate.h"
+
 @interface RetainDataViewController ()
 
 @end
@@ -27,6 +30,81 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+ /*   AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    self.PersistentPeriodPicker.*/
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    if(appdelegate.TapPersisitent.period == PersistentPeriodInfinite){
+        //永続的だった場合
+        [self.PersistentPeriodPicker selectRow:0 inComponent:0 animated:NO];
+    }else if(appdelegate.TapPersisitent.period == PersistentPeriod_3_Years){
+        //半年だった場合
+        [self.PersistentPeriodPicker selectRow:1 inComponent:0 animated:NO];
+        
+    }else if(appdelegate.TapPersisitent.period == PersistentPeriod_1_Years){
+        //3年だった場合
+        [self.PersistentPeriodPicker selectRow:2 inComponent:0 animated:NO];
+    }else if(appdelegate.TapPersisitent.period == PersistentPeriod_Half_Years){
+        //1年だった場合
+        [self.PersistentPeriodPicker selectRow:3 inComponent:0 animated:NO];
+    }else if(appdelegate.TapPersisitent.period == PersistentPeriod_3_Month){
+        [self.PersistentPeriodPicker selectRow:4 inComponent:0 animated:NO];
+    }else if(appdelegate.TapPersisitent.period == PersistentPeriod_1_Month){
+        //一月だった場合
+        [self.PersistentPeriodPicker selectRow:5 inComponent:0 animated:NO];
+    }
+    
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    if(appdelegate.TapPersisitent == nil){
+        appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+    }
+    
+    switch([self.PersistentPeriodPicker selectedRowInComponent:0]){
+        case 0:
+            appdelegate.TapPersisitent.period = PersistentPeriodInfinite;
+            break;
+        case 1:
+            appdelegate.TapPersisitent.period = PersistentPeriod_3_Years;
+            break;
+        case 2:
+            appdelegate.TapPersisitent.period = PersistentPeriod_1_Years;
+            break;
+        case 3:
+            appdelegate.TapPersisitent.period = PersistentPeriod_Half_Years;
+            break;
+        case 4:
+            appdelegate.TapPersisitent.period = PersistentPeriod_3_Month;
+            break;
+        case 5:
+            appdelegate.TapPersisitent.period = PersistentPeriod_1_Month;
+            break;
+            
+    }
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,10 +113,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+/*- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
-}
+}*/
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
