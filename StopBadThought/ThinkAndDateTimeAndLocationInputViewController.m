@@ -9,6 +9,7 @@
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
 
 //ユーザーインポート
+#import "UIColor+HexString.h"
 
 
 
@@ -61,7 +62,7 @@
     self.ThinkingDicription.layer.borderColor = [UIColor blackColor].CGColor;
     self.ThinkingDicription.layer.borderWidth = 1;
     
-    self.RecordButton.buttonBackgroundColor = [UIColor colorWithRed:0.32f green:0.64f blue:0.32f alpha:1.00f]; //[UIColor colorWithHue:0.0f saturation:0.0f brightness:0.60f alpha:1.0f];
+    self.RecordButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#FF0000"]; //[UIColor colorWithHue:0.0f saturation:0.0f brightness:0.60f alpha:1.0f];
     self.RecordButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     self.RecordButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     [self.RecordButton setFlatTitle:@"記録"];

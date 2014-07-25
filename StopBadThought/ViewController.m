@@ -13,6 +13,7 @@
 #import "ThinkAndDateTimeAndLocationInputViewController.h"
 #import "HistoryPlotViewController.h"
 #import "AppDelegate.h"
+#import "UIColor+HexString.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
     
     
     //「嫌な考えが浮かんだら押してください！！」ボタンの設定
-    self.CountButtn.buttonBackgroundColor = [UIColor colorWithRed:0.74f green:0.21f blue:0.18f alpha:1.00f];
+    self.CountButtn.buttonBackgroundColor = [UIColor colorWithHexString:@"#dc143c"];
     self.CountButtn.buttonForegroundColor = [UIColor colorWithRed:255.0f/255.0f green:246.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
     self.CountButtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:15.0f];
     self.CountButtn.titleLabel.numberOfLines = 2;
@@ -35,15 +36,15 @@
     [self.CountButtn setFlatImage:nil];
     
     //「設定」ボタンの設定
-    self.SettingButton.buttonBackgroundColor = [@"#538aa4" toColor];
-    self.SettingButton.buttonForegroundColor = [UIColor colorWithRed:0.99f green:0.00f blue:0.00f alpha:1.00f];
+    self.SettingButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#77d7ff"];
+    self.SettingButton.buttonForegroundColor = [UIColor colorWithHexString:@"#2b2b2b"];
     self.SettingButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     
     [self.SettingButton setFlatTitle:@"設定"];
     [self.CountButtn setFlatImage:nil];
     
     //「履歴」ボタンの設定
-    self.HistoryButton.buttonBackgroundColor = [UIColor colorWithRed:0.32f green:0.64f blue:0.32f alpha:1.00f];
+    self.HistoryButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#228b22"];
     self.HistoryButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     self.HistoryButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];;
     [self.HistoryButton setFlatTitle:@"履歴"];
