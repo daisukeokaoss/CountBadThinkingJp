@@ -21,6 +21,7 @@
 
 @property (nonatomic) NSInteger CellIndex;
 
+- (IBAction)EditingButtonClick:(UIBarButtonItem *)sender;
 
 
 @end
@@ -169,4 +170,12 @@
 
  */
 
+- (IBAction)EditingButtonClick:(UIBarButtonItem *)sender
+{
+    if(self.editing == YES){
+        self.editing = NO;
+    }else if(self.editing == NO){
+        self.editing = YES;
+    }
+}
 @end

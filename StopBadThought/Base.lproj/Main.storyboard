@@ -205,6 +205,11 @@
                                 <action selector="ReturnButtonTap:" destination="qNq-1s-W7v" id="Kn8-B7-B6o"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="Q2k-Bf-UwO">
+                            <connections>
+                                <action selector="EditingButtonClick:" destination="qNq-1s-W7v" id="VP4-V6-2DK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="NPr-F6-W9H" kind="modal" identifier="ShowOneTapRecordPlot" id="C9F-ab-AWN"/>
