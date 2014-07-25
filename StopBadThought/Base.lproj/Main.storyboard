@@ -257,7 +257,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-nn-I3s">
-                                <rect key="frame" x="11" y="300" width="298" height="248"/>
+                                <rect key="frame" x="11" y="355" width="298" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-fT-uhY">
@@ -274,6 +274,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="heavy-rain-98539_150.png" translatesAutoresizingMaskIntoConstraints="NO" id="S83-cJ-jip">
+                                <rect key="frame" x="11" y="294" width="42" height="39"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dr0-j2-93F">
+                                <rect key="frame" x="59" y="299" width="205" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ivak_Decorative_Sun.png" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-Gd-naB">
+                                <rect key="frame" x="264" y="286" width="51" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -289,6 +301,7 @@
                         <outlet property="Description" destination="S2t-fT-uhY" id="6ej-kj-WPZ"/>
                         <outlet property="LatutudeLabel" destination="07P-A5-ber" id="Ofu-7I-UKG"/>
                         <outlet property="LogtitudeLabel" destination="CG5-lA-yG2" id="vjE-mk-2du"/>
+                        <outlet property="MoodValue" destination="Dr0-j2-93F" id="ykO-5h-JRQ"/>
                         <outlet property="PlotMapView" destination="9o0-nn-I3s" id="hNI-vs-pbG"/>
                     </connections>
                 </viewController>
@@ -354,18 +367,18 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8eJ-FO-Ml5">
-                                <rect key="frame" x="6" y="261" width="305" height="296"/>
+                                <rect key="frame" x="6" y="315" width="305" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longtitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soN-1Y-PuI">
-                                <rect key="frame" x="67" y="216" width="83" height="21"/>
+                                <rect key="frame" x="67" y="216" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGO-JT-W4L">
-                                <rect key="frame" x="67" y="238" width="63" height="21"/>
+                                <rect key="frame" x="67" y="238" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -376,22 +389,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="緯度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcN-Cb-akS">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="緯度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcN-Cb-akS">
                                 <rect key="frame" x="20" y="238" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-Ks-oQf">
+                                <rect key="frame" x="65" y="275" width="209" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ivak_Decorative_Sun.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-FO-4Sp">
+                                <rect key="frame" x="267" y="265" width="44" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="heavy-rain-98539_150.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mgk-FZ-6DP">
+                                <rect key="frame" x="16" y="271" width="43" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8eJ-FO-Ml5" firstAttribute="top" secondItem="NcN-Cb-akS" secondAttribute="bottom" constant="2" id="akj-fx-fUF"/>
                             <constraint firstItem="rAM-I1-znK" firstAttribute="top" secondItem="8eJ-FO-Ml5" secondAttribute="bottom" constant="11" id="tno-A8-Xoc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="CancelJSFlatButton" destination="XmF-74-bGP" id="so6-hu-tJ2"/>
                         <outlet property="DataTimeLabel" destination="Fvg-Mk-n5E" id="koZ-aX-X46"/>
+                        <outlet property="MoodScale" destination="Z2x-Ks-oQf" id="i0e-Bp-MWu"/>
                         <outlet property="RecordButton" destination="DLi-BG-ldZ" id="UR4-Rg-aSs"/>
                         <outlet property="ThinkingDicription" destination="dZt-Te-8UB" id="q7H-o5-iG6"/>
                         <outlet property="latLabel" destination="fGO-JT-W4L" id="svr-x5-E9e"/>
@@ -458,6 +483,10 @@
             <point key="canvasLocation" x="2942" y="809"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heavy-rain-98539_150.png" width="150" height="139"/>
+        <image name="ivak_Decorative_Sun.png" width="300" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

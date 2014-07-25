@@ -17,6 +17,7 @@
 @interface ThinkAndDateTimeAndLocationInputViewController ()
 - (void)SetUpLocation;
 
+@property (weak, nonatomic) IBOutlet UISlider *MoodScale;
 
 @end
 
@@ -38,6 +39,8 @@
     onetap.date = [NSDate date];
     onetap.description = [self.ThinkingDicription.text mutableCopy];
     onetap.deleteFlag = false;
+    onetap.Mood = self.MoodScale.value;
+    
 
     AppDelegate *appdelegate;
     appdelegate = [[UIApplication sharedApplication] delegate];

@@ -11,6 +11,8 @@
 		C916DF6618A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6518A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m */; };
 		C916DF6918A7DA6800BDDAE9 /* HistoryPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6818A7DA6800BDDAE9 /* HistoryPlotViewController.m */; };
 		C94C26F7198205440065ACE8 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C26F6198205440065ACE8 /* UIColor+HexString.m */; };
+		C94C26F9198226340065ACE8 /* heavy-rain-98539_150.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C26F8198226340065ACE8 /* heavy-rain-98539_150.png */; };
+		C94C26FB198226E70065ACE8 /* ivak_Decorative_Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C26FA198226E70065ACE8 /* ivak_Decorative_Sun.png */; };
 		C970942B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942C183B053300264B6D /* CoreGraphics.framework */; };
 		C970942F183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
@@ -55,6 +57,8 @@
 		C916DF6818A7DA6800BDDAE9 /* HistoryPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryPlotViewController.m; sourceTree = "<group>"; };
 		C94C26F5198205440065ACE8 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		C94C26F6198205440065ACE8 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		C94C26F8198226340065ACE8 /* heavy-rain-98539_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heavy-rain-98539_150.png"; sourceTree = "<group>"; };
+		C94C26FA198226E70065ACE8 /* ivak_Decorative_Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ivak_Decorative_Sun.png; sourceTree = "<group>"; };
 		C9709427183B053300264B6D /* StopBadThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopBadThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C970942A183B053300264B6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C970942C183B053300264B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +178,8 @@
 				C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */,
 				C94C26F5198205440065ACE8 /* UIColor+HexString.h */,
 				C94C26F6198205440065ACE8 /* UIColor+HexString.m */,
+				C94C26F8198226340065ACE8 /* heavy-rain-98539_150.png */,
+				C94C26FA198226E70065ACE8 /* ivak_Decorative_Sun.png */,
 				C97096AE1843175B00264B6D /* JSFlatButton */,
 				C9709442183B053300264B6D /* Images.xcassets */,
 				C9709431183B053300264B6D /* Supporting Files */,
@@ -302,6 +308,8 @@
 				C9709443183B053300264B6D /* Images.xcassets in Resources */,
 				C9709435183B053300264B6D /* InfoPlist.strings in Resources */,
 				C970943E183B053300264B6D /* Main.storyboard in Resources */,
+				C94C26FB198226E70065ACE8 /* ivak_Decorative_Sun.png in Resources */,
+				C94C26F9198226340065ACE8 /* heavy-rain-98539_150.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

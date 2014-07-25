@@ -18,6 +18,8 @@
 @property (nonatomic,strong) NSDate *date;
 @property (nonatomic,strong) NSMutableString *description;
 
+@property (nonatomic) int Mood;
+
 @property (nonatomic) BOOL deleteFlag;
 
 @end
