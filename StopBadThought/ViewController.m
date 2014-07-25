@@ -35,7 +35,7 @@
     [self.CountButtn setFlatImage:nil];
     
     //「設定」ボタンの設定
-    self.SettingButton.buttonBackgroundColor = [UIColor colorWithRed:0.99f green:0.99f blue:0.00f alpha:1.00f];
+    self.SettingButton.buttonBackgroundColor = [@"#538aa4" toColor];
     self.SettingButton.buttonForegroundColor = [UIColor colorWithRed:0.99f green:0.00f blue:0.00f alpha:1.00f];
     self.SettingButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     

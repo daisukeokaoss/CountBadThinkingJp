@@ -10,6 +10,7 @@
 		C916DF6318A7C99100BDDAE9 /* OneTapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */; };
 		C916DF6618A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6518A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m */; };
 		C916DF6918A7DA6800BDDAE9 /* HistoryPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916DF6818A7DA6800BDDAE9 /* HistoryPlotViewController.m */; };
+		C94C26F7198205440065ACE8 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C26F6198205440065ACE8 /* UIColor+HexString.m */; };
 		C970942B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942C183B053300264B6D /* CoreGraphics.framework */; };
 		C970942F183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		C916DF6518A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTapRecordPersistentManager.m; sourceTree = "<group>"; };
 		C916DF6718A7DA6800BDDAE9 /* HistoryPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryPlotViewController.h; sourceTree = "<group>"; };
 		C916DF6818A7DA6800BDDAE9 /* HistoryPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryPlotViewController.m; sourceTree = "<group>"; };
+		C94C26F5198205440065ACE8 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		C94C26F6198205440065ACE8 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		C9709427183B053300264B6D /* StopBadThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopBadThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C970942A183B053300264B6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C970942C183B053300264B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +172,8 @@
 				C916DF6518A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m */,
 				C916DF6118A7C99100BDDAE9 /* OneTapRecord.h */,
 				C916DF6218A7C99100BDDAE9 /* OneTapRecord.m */,
+				C94C26F5198205440065ACE8 /* UIColor+HexString.h */,
+				C94C26F6198205440065ACE8 /* UIColor+HexString.m */,
 				C97096AE1843175B00264B6D /* JSFlatButton */,
 				C9709442183B053300264B6D /* Images.xcassets */,
 				C9709431183B053300264B6D /* Supporting Files */,
@@ -319,6 +324,7 @@
 				C916DF6318A7C99100BDDAE9 /* OneTapRecord.m in Sources */,
 				C916DF6918A7DA6800BDDAE9 /* HistoryPlotViewController.m in Sources */,
 				C97096B71843175B00264B6D /* UIImage+JSFlatButton.m in Sources */,
+				C94C26F7198205440065ACE8 /* UIColor+HexString.m in Sources */,
 				C97096B51843175B00264B6D /* JSFlatButton.m in Sources */,
 				C970943B183B053300264B6D /* AppDelegate.m in Sources */,
 				C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */,
