@@ -56,21 +56,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     if(indexPath.section == 0){
-        if(indexPath.row == 0){
+        /*if(indexPath.row == 0){
            static NSString *CellIdentifier = @"DataRetainPeriodCell";
            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
            return cell;
-        }else if(indexPath.row == 1){
+        }else */
+        if(indexPath.row == 0){
             static NSString *CellIdentifier = @"DeleteAllCell";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             

@@ -34,7 +34,6 @@
 		C9B4129318E9A463009A72B8 /* OneTapRecordPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4129218E9A463009A72B8 /* OneTapRecordPlotViewController.m */; };
 		C9B9F906188AD35000817ACB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B9F905188AD35000817ACB /* CoreLocation.framework */; };
 		C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6DE185B2902006D028B /* SettingTableViewController.m */; };
-		C9D2E6E5185B3321006D028B /* RetainDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6E4185B3321006D028B /* RetainDataViewController.m */; };
 		C9F47BA4188AED5D00D52E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F47BA3188AED5D00D52E1B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +90,6 @@
 		C9B9F905188AD35000817ACB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9D2E6DD185B2902006D028B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		C9D2E6DE185B2902006D028B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		C9D2E6E3185B3321006D028B /* RetainDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainDataViewController.h; sourceTree = "<group>"; };
-		C9D2E6E4185B3321006D028B /* RetainDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainDataViewController.m; sourceTree = "<group>"; };
 		C9F47BA3188AED5D00D52E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -164,8 +161,6 @@
 				C9B4129218E9A463009A72B8 /* OneTapRecordPlotViewController.m */,
 				C916DF6718A7DA6800BDDAE9 /* HistoryPlotViewController.h */,
 				C916DF6818A7DA6800BDDAE9 /* HistoryPlotViewController.m */,
-				C9D2E6E3185B3321006D028B /* RetainDataViewController.h */,
-				C9D2E6E4185B3321006D028B /* RetainDataViewController.m */,
 				C9D2E6DD185B2902006D028B /* SettingTableViewController.h */,
 				C9D2E6DE185B2902006D028B /* SettingTableViewController.m */,
 				C97096B8184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.h */,
@@ -340,7 +335,6 @@
 				C9709437183B053300264B6D /* main.m in Sources */,
 				C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */,
 				C9B4129318E9A463009A72B8 /* OneTapRecordPlotViewController.m in Sources */,
-				C9D2E6E5185B3321006D028B /* RetainDataViewController.m in Sources */,
 				C916DF6618A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
