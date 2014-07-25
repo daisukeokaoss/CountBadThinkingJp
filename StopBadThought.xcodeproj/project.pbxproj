@@ -13,6 +13,7 @@
 		C94C26F7198205440065ACE8 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C26F6198205440065ACE8 /* UIColor+HexString.m */; };
 		C94C26F9198226340065ACE8 /* heavy-rain-98539_150.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C26F8198226340065ACE8 /* heavy-rain-98539_150.png */; };
 		C94C26FB198226E70065ACE8 /* ivak_Decorative_Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C26FA198226E70065ACE8 /* ivak_Decorative_Sun.png */; };
+		C94C26FE198231ED0065ACE8 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C26FD198231ED0065ACE8 /* CopyRightViewController.m */; };
 		C970942B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942C183B053300264B6D /* CoreGraphics.framework */; };
 		C970942F183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
@@ -58,6 +59,8 @@
 		C94C26F6198205440065ACE8 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		C94C26F8198226340065ACE8 /* heavy-rain-98539_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heavy-rain-98539_150.png"; sourceTree = "<group>"; };
 		C94C26FA198226E70065ACE8 /* ivak_Decorative_Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ivak_Decorative_Sun.png; sourceTree = "<group>"; };
+		C94C26FC198231ED0065ACE8 /* CopyRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyRightViewController.h; sourceTree = "<group>"; };
+		C94C26FD198231ED0065ACE8 /* CopyRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyRightViewController.m; sourceTree = "<group>"; };
 		C9709427183B053300264B6D /* StopBadThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopBadThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C970942A183B053300264B6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C970942C183B053300264B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,8 @@
 				C9709439183B053300264B6D /* AppDelegate.h */,
 				C970943A183B053300264B6D /* AppDelegate.m */,
 				C970943C183B053300264B6D /* Main.storyboard */,
+				C94C26FC198231ED0065ACE8 /* CopyRightViewController.h */,
+				C94C26FD198231ED0065ACE8 /* CopyRightViewController.m */,
 				C9B4129118E9A463009A72B8 /* OneTapRecordPlotViewController.h */,
 				C9B4129218E9A463009A72B8 /* OneTapRecordPlotViewController.m */,
 				C916DF6718A7DA6800BDDAE9 /* HistoryPlotViewController.h */,
@@ -335,6 +340,7 @@
 				C9709437183B053300264B6D /* main.m in Sources */,
 				C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */,
 				C9B4129318E9A463009A72B8 /* OneTapRecordPlotViewController.m in Sources */,
+				C94C26FE198231ED0065ACE8 /* CopyRightViewController.m in Sources */,
 				C916DF6618A7CBDA00BDDAE9 /* OneTapRecordPersistentManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

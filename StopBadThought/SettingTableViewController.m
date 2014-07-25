@@ -63,14 +63,6 @@
 {
     
     if(indexPath.section == 0){
-        /*if(indexPath.row == 0){
-           static NSString *CellIdentifier = @"DataRetainPeriodCell";
-           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-           return cell;
-        }else */
         if(indexPath.row == 0){
             static NSString *CellIdentifier = @"DeleteAllCell";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
