@@ -178,4 +178,15 @@
         self.editing = YES;
     }
 }
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AppDelegate *appdelegate;
+    appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    [appdelegate.TapPersisitent.TapRecordArray removeObjectAtIndex:indexPath.section];
+    [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section]  withRowAnimation:YES];
+    
+}
+
+
 @end
