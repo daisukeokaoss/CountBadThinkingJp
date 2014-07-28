@@ -95,6 +95,11 @@
     
     
     //ロケーションマネージャセットアップ
+	longitude = 0.0;
+	latitude = 0.0;
+	self.lonLabel.text = [NSString stringWithFormat:@"%f",longitude];
+	self.latLabel.text = [NSString stringWithFormat:@"%f",latitude];
+    
     lm = [[CLLocationManager alloc] init];
     lm.delegate = self;
     // 取得精度の指定
