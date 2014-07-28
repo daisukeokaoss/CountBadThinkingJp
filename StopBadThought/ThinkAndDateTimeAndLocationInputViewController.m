@@ -15,9 +15,12 @@
 
 
 @interface ThinkAndDateTimeAndLocationInputViewController ()
-- (void)SetUpLocation;
+
+//- (void)SetUpLocation;
 
 @property (weak, nonatomic) IBOutlet UISlider *MoodScale;
+
+
 
 @end
 
@@ -88,12 +91,37 @@
     // ログ出力
     self.DataTimeLabel.text = strNow;
     
-    [self SetUpLocation];
+    //[self SetUpLocation];
+    
+    
+    //ロケーションマネージャセットアップ
+    lm = [[CLLocationManager alloc] init];
+    lm.delegate = self;
+    // 取得精度の指定
+    lm.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    // 取得頻度（指定したメートル移動したら再取得する）
+    lm.distanceFilter = 5;    // 5m移動するごとに取得
+    
+    [self startLocation];
+    
+    LoactionSearchExec = 2;
     
     
 }
 
-- (void)SetUpLocation
+- (void)startLocation {
+    [lm startUpdatingLocation];
+}
+
+- (void)stopLocation {
+    [lm stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [lm stopUpdatingLocation];
+}
+
+/*- (void)SetUpLocation
 //現在位置取得をセットアップする
 {
 	longitude = 0.0;
@@ -115,14 +143,19 @@
     }
 
 
-}
+}*/
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 	// 位置情報更新
 {
-    if(self.OneTimeExec == true){
+   /* if(self.OneTimeExec == true){
         self.OneTimeExec = false;
     }else{
-        return;
+        [self stopLocation];
+    }*/
+    if(LoactionSearchExec > 0){
+        LoactionSearchExec --;
+    }else{
+        [self stopLocation];
     }
     
 	longitude = newLocation.coordinate.longitude;
@@ -137,6 +170,8 @@
 
     cur.coordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     [self.mv showAnnotations:@[cur] animated:NO];
+    
+    [self stopLocation];
     
     
 }

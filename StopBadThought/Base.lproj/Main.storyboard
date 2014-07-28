@@ -317,7 +317,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="953-IF-F79">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="953-IF-F79">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -330,6 +330,9 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uue-TO-whY" firstAttribute="top" secondItem="953-IF-F79" secondAttribute="bottom" id="xVS-O1-0qW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="LicenseTextView" destination="qRg-xm-dSB" id="hnQ-1n-QyV"/>
@@ -426,7 +429,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-Ks-oQf">
-                                <rect key="frame" x="65" y="275" width="209" height="31"/>
+                                <rect key="frame" x="57" y="275" width="211" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ivak_Decorative_Sun.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-FO-4Sp">

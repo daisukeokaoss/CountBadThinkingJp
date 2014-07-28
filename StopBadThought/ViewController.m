@@ -14,12 +14,19 @@
 #import "HistoryPlotViewController.h"
 #import "AppDelegate.h"
 #import "UIColor+HexString.h"
+#import <iAd/iAd.h>
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.canDisplayBannerAds = YES;
+}
 
 - (void)viewDidLoad
 {

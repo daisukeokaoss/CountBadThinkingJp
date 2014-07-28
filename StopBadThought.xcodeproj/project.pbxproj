@@ -34,6 +34,7 @@
 		C97096BA184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B9184322FE00264B6D /* ThinkAndDateTimeAndLocationInputViewController.m */; };
 		C9B4129318E9A463009A72B8 /* OneTapRecordPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4129218E9A463009A72B8 /* OneTapRecordPlotViewController.m */; };
 		C9B9F906188AD35000817ACB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B9F905188AD35000817ACB /* CoreLocation.framework */; };
+		C9CAB3701985FF7E0004B6D6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB36F1985FF7E0004B6D6 /* iAd.framework */; };
 		C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6DE185B2902006D028B /* SettingTableViewController.m */; };
 		C9F47BA4188AED5D00D52E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F47BA3188AED5D00D52E1B /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		C9B4129118E9A463009A72B8 /* OneTapRecordPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTapRecordPlotViewController.h; sourceTree = "<group>"; };
 		C9B4129218E9A463009A72B8 /* OneTapRecordPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTapRecordPlotViewController.m; sourceTree = "<group>"; };
 		C9B9F905188AD35000817ACB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9CAB36F1985FF7E0004B6D6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C9D2E6DD185B2902006D028B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		C9D2E6DE185B2902006D028B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		C9F47BA3188AED5D00D52E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CAB3701985FF7E0004B6D6 /* iAd.framework in Frameworks */,
 				C9F47BA4188AED5D00D52E1B /* MapKit.framework in Frameworks */,
 				C9B9F906188AD35000817ACB /* CoreLocation.framework in Frameworks */,
 				C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */,
@@ -144,6 +147,7 @@
 		C9709429183B053300264B6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9CAB36F1985FF7E0004B6D6 /* iAd.framework */,
 				C9F47BA3188AED5D00D52E1B /* MapKit.framework */,
 				C9B9F905188AD35000817ACB /* CoreLocation.framework */,
 				C970942A183B053300264B6D /* Foundation.framework */,

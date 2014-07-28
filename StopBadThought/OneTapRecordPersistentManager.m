@@ -37,7 +37,7 @@
     //int count = [ud integerForKey:@"TapHistoryCount"];
     
     NSData *OpenData = [ud dataForKey:@"TapHistory"];
-    self.period = [ud integerForKey:@"PersistentPeriod"];
+    self.period = (int)[ud integerForKey:@"PersistentPeriod"];
     self.TapRecordArray = [NSKeyedUnarchiver unarchiveObjectWithData: OpenData];
     
     //self.TapRecordArray = [ud objectForKey:@"TapHistory"];
@@ -50,7 +50,7 @@
 -(int)CountTapRecordNumber
 //記録されているタップの数を返す
 {
-    return[self.TapRecordArray count];
+    return (int)[self.TapRecordArray count];
 }
 
 //最後からX番目の日付を返すメソッド

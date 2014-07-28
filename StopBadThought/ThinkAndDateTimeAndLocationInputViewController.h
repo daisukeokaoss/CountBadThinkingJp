@@ -25,6 +25,10 @@
 	// 現在位置記録用
 	CLLocationDegrees longitude;
 	CLLocationDegrees latitude;
+    
+    CLLocationManager *lm;
+    
+        int LoactionSearchExec;
 
 }
 @property (nonatomic,strong) CLLocationManager* locationManager;
