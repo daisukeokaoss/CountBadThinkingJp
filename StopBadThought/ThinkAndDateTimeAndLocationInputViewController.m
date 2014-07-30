@@ -111,6 +111,8 @@
     
     LoactionSearchExec = 2;
     
+    [self.MoodScale setValue:5];
+    
     
 }
 
