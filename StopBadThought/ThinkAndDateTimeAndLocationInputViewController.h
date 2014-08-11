@@ -14,12 +14,21 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+#import "OneTapRecordPersistentManager.h"
+#import "OneTapRecord.h"
+
+#import "AppDelegate.h"
+
 
 @interface ThinkAndDateTimeAndLocationInputViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>{
     
 	// 現在位置記録用
 	CLLocationDegrees longitude;
 	CLLocationDegrees latitude;
+    
+    CLLocationManager *lm;
+    
+        int LoactionSearchExec;
 
 }
 @property (nonatomic,strong) CLLocationManager* locationManager;
@@ -39,7 +48,11 @@
 
 @property (weak, nonatomic) IBOutlet JSFlatButton *CancelJSFlatButton;
 
+//@property (strong,nonatomic) OneTapRecordPersistentManager *Record;
+
 @property bool RepeatLocationUpload;
+
+@property bool OneTimeExec ;
 
 
 

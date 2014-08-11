@@ -11,11 +11,15 @@
 //以下、ユーザーインクルード
 #import <CoreLocation/CoreLocation.h>
 
-@interface OneTapRecord : NSObject
+@interface OneTapRecord : NSObject<NSCoding>
 
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDegrees latitude;
 @property (nonatomic,strong) NSDate *date;
-@property (nonatomic,strong) NSString *description;
+@property (nonatomic,strong) NSMutableString *description;
+
+@property (nonatomic) int Mood;
+
+@property (nonatomic) BOOL deleteFlag;
 
 @end

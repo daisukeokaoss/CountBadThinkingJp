@@ -8,6 +8,10 @@
 
 #import "SettingTableViewController.h"
 
+
+
+
+
 @interface SettingTableViewController ()
 
 @end
@@ -52,7 +56,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,23 +64,47 @@
     
     if(indexPath.section == 0){
         if(indexPath.row == 0){
-           static NSString *CellIdentifier = @"DataRetainPeriodCell";
-           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-           return cell;
-        }else if(indexPath.row == 1){
-            static NSString *CellIdentifier = @"isLocationSave";
+            static NSString *CellIdentifier = @"DeleteAllCell";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            return cell;
-        }else if(indexPath.row == 2){
-            static NSString *CellIdentifier = @"isTimeSaved";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            // Configure the cell...
+            
             return cell;
         }
     }
     return nil;
+}
+- (IBAction)ReturnToMainButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)DeleteAllButtonTapped:(id)sender
+{
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"確認" message:@"削除してもよろしいですか？"
+                              delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+    [alert show];
+}
+
+
+
+
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if(buttonIndex==0){
+        
+    }else if(buttonIndex == 1){
+        AppDelegate *appdelegate;
+        appdelegate = [[UIApplication sharedApplication] delegate];
+        if(appdelegate.TapPersisitent == nil){
+            appdelegate.TapPersisitent = [[OneTapRecordPersistentManager alloc] init];
+        }
+        
+        [appdelegate.TapPersisitent.TapRecordArray removeAllObjects];
+
+        
+    }
+   
+    
 }
 
 /*

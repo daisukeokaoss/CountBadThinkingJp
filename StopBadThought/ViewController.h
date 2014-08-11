@@ -7,11 +7,21 @@
 //
 #import <UIKit/UIKit.h>
 
-#import "JSFlatButton.h"
+//ユーザーインクルード
 
+#import "JSFlatButton.h"
+#import "OneTapRecordPersistentManager.h"
 
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet JSFlatButton *CountButtn;
+
+
+
+@property (weak, nonatomic) IBOutlet JSFlatButton *SettingButton;
+@property (weak, nonatomic) IBOutlet JSFlatButton *HistoryButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *PlotBadThoughtCountLabel;
+
 
 @end
