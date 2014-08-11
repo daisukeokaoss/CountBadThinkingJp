@@ -1,0 +1,84 @@
+
+/* Class = "IBUILabel"; text = "latitude"; ObjectID = "07P-A5-ber"; */
+"07P-A5-ber.text" = "latitude";
+
+/* Class = "IBUIButton"; normalTitle = "履歴"; ObjectID = "2Uh-08-KoK"; */
+"2Uh-08-KoK.normalTitle" = "履歴";
+
+/* Class = "IBUILabel"; text = "longtitude"; ObjectID = "CG5-lA-yG2"; */
+"CG5-lA-yG2.text" = "longtitude";
+
+/* Class = "IBUIButton"; normalTitle = "記録"; ObjectID = "DLi-BG-ldZ"; */
+"DLi-BG-ldZ.normalTitle" = "記録";
+
+/* Class = "IBUILabel"; text = "日付と時刻"; ObjectID = "Fvg-Mk-n5E"; */
+"Fvg-Mk-n5E.text" = "日付と時刻";
+
+/* Class = "IBUIButton"; normalTitle = "嫌な考えが浮かんだら"; ObjectID = "JUi-3u-Ls6"; */
+"JUi-3u-Ls6.normalTitle" = "嫌な考えが浮かんだら";
+
+/* Class = "IBUILabel"; text = "経度:"; ObjectID = "Jz8-jz-VLP"; */
+"Jz8-jz-VLP.text" = "経度:";
+
+/* Class = "IBUILabel"; text = "（必須ではありません）"; ObjectID = "N1O-U4-QEJ"; */
+"N1O-U4-QEJ.text" = "（必須ではありません）";
+
+/* Class = "IBUILabel"; text = "緯度:"; ObjectID = "NcN-Cb-akS"; */
+"NcN-Cb-akS.text" = "緯度:";
+
+/* Class = "IBUINavigationItem"; title = "履歴"; ObjectID = "OCj-BT-4rU"; */
+"OCj-BT-4rU.title" = "履歴";
+
+/* Class = "IBUILabel"; text = "浮かんだ嫌な考えを書いてください"; ObjectID = "PxJ-Gd-4DO"; */
+"PxJ-Gd-4DO.text" = "浮かんだ嫌な考えを書いてください";
+
+/* Class = "IBUIBarButtonItem"; title = "編集"; ObjectID = "Q2k-Bf-UwO"; */
+"Q2k-Bf-UwO.title" = "編集";
+
+/* Class = "IBUIBarButtonItem"; title = "戻る"; ObjectID = "Qex-c8-rUO"; */
+"Qex-c8-rUO.title" = "戻る";
+
+/* Class = "IBUILabel"; text = "緯度:"; ObjectID = "Qnv-JX-Zlk"; */
+"Qnv-JX-Zlk.text" = "緯度:";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "S2t-fT-uhY"; */
+"S2t-fT-uhY.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUILabel"; text = "経度:"; ObjectID = "SV4-S9-rRq"; */
+"SV4-S9-rRq.text" = "経度:";
+
+/* Class = "IBUIBarButtonItem"; title = "戻る"; ObjectID = "TAg-yp-JGt"; */
+"TAg-yp-JGt.title" = "戻る";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "W0s-1r-P3i"; */
+"W0s-1r-P3i.text" = "Title";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "XmF-74-bGP"; */
+"XmF-74-bGP.normalTitle" = "Button";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "Yvh-Gd-Sca"; */
+"Yvh-Gd-Sca.title" = "Title";
+
+/* Class = "IBUIBarButtonItem"; title = "戻る"; ObjectID = "ZW8-tx-Tzi"; */
+"ZW8-tx-Tzi.title" = "戻る";
+
+/* Class = "IBUILabel"; text = "Latitude"; ObjectID = "fGO-JT-W4L"; */
+"fGO-JT-W4L.text" = "Latitude";
+
+/* Class = "IBUILabel"; text = "今日悪い考えは０回浮かびました"; ObjectID = "iS0-Va-Qjl"; */
+"iS0-Va-Qjl.text" = "今日悪い考えは０回浮かびました";
+
+/* Class = "IBUIButton"; normalTitle = "全削除"; ObjectID = "iab-I8-55H"; */
+"iab-I8-55H.normalTitle" = "全削除";
+
+/* Class = "IBUIBarButtonItem"; title = "戻る"; ObjectID = "jAs-mq-0ri"; */
+"jAs-mq-0ri.title" = "戻る";
+
+/* Class = "IBUILabel"; text = "日付"; ObjectID = "m0I-Ww-bp1"; */
+"m0I-Ww-bp1.text" = "日付";
+
+/* Class = "IBUILabel"; text = "Longtitude"; ObjectID = "soN-1Y-PuI"; */
+"soN-1Y-PuI.text" = "Longtitude";
+
+/* Class = "IBUIButton"; normalTitle = "設定"; ObjectID = "vfF-8R-4BV"; */
+"vfF-8R-4BV.normalTitle" = "設定";

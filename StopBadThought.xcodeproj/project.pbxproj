@@ -17,7 +17,6 @@
 		C970942B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970942D183B053300264B6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942C183B053300264B6D /* CoreGraphics.framework */; };
 		C970942F183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
-		C9709435183B053300264B6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9709433183B053300264B6D /* InfoPlist.strings */; };
 		C9709437183B053300264B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9709436183B053300264B6D /* main.m */; };
 		C970943B183B053300264B6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C970943A183B053300264B6D /* AppDelegate.m */; };
 		C970943E183B053300264B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C970943C183B053300264B6D /* Main.storyboard */; };
@@ -26,7 +25,6 @@
 		C970944A183B053300264B6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9709449183B053300264B6D /* XCTest.framework */; };
 		C970944B183B053300264B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942A183B053300264B6D /* Foundation.framework */; };
 		C970944C183B053300264B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C970942E183B053300264B6D /* UIKit.framework */; };
-		C9709454183B053300264B6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9709452183B053300264B6D /* InfoPlist.strings */; };
 		C9709456183B053300264B6D /* StopBadThoughtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9709455183B053300264B6D /* StopBadThoughtTests.m */; };
 		C97096B51843175B00264B6D /* JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B01843175B00264B6D /* JSFlatButton.m */; };
 		C97096B61843175B00264B6D /* UIColor+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C97096B21843175B00264B6D /* UIColor+JSFlatButton.m */; };
@@ -36,6 +34,7 @@
 		C9B9F906188AD35000817ACB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B9F905188AD35000817ACB /* CoreLocation.framework */; };
 		C9CAB3701985FF7E0004B6D6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB36F1985FF7E0004B6D6 /* iAd.framework */; };
 		C9D2E6DF185B2902006D028B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2E6DE185B2902006D028B /* SettingTableViewController.m */; };
+		C9EEA0C219992E8400389853 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EEA0C419992E8400389853 /* Localizable.strings */; };
 		C9F47BA4188AED5D00D52E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F47BA3188AED5D00D52E1B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		C970942C183B053300264B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C970942E183B053300264B6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9709432183B053300264B6D /* StopBadThought-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StopBadThought-Info.plist"; sourceTree = "<group>"; };
-		C9709434183B053300264B6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9709436183B053300264B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9709438183B053300264B6D /* StopBadThought-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StopBadThought-Prefix.pch"; sourceTree = "<group>"; };
 		C9709439183B053300264B6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 		C9709448183B053300264B6D /* StopBadThoughtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopBadThoughtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9709449183B053300264B6D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C9709451183B053300264B6D /* StopBadThoughtTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StopBadThoughtTests-Info.plist"; sourceTree = "<group>"; };
-		C9709453183B053300264B6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9709455183B053300264B6D /* StopBadThoughtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopBadThoughtTests.m; sourceTree = "<group>"; };
 		C97096AF1843175B00264B6D /* JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatButton.h; sourceTree = "<group>"; };
 		C97096B01843175B00264B6D /* JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatButton.m; sourceTree = "<group>"; };
@@ -95,6 +92,10 @@
 		C9CAB36F1985FF7E0004B6D6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C9D2E6DD185B2902006D028B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		C9D2E6DE185B2902006D028B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		C9EEA0BE19992DEE00389853 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C9EEA0BF19992DF400389853 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		C9EEA0C519992EB600389853 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9EEA0C619992F6A00389853 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9F47BA3188AED5D00D52E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -194,8 +195,8 @@
 		C9709431183B053300264B6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9EEA0C419992E8400389853 /* Localizable.strings */,
 				C9709432183B053300264B6D /* StopBadThought-Info.plist */,
-				C9709433183B053300264B6D /* InfoPlist.strings */,
 				C9709436183B053300264B6D /* main.m */,
 				C9709438183B053300264B6D /* StopBadThought-Prefix.pch */,
 			);
@@ -215,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				C9709451183B053300264B6D /* StopBadThoughtTests-Info.plist */,
-				C9709452183B053300264B6D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9709443183B053300264B6D /* Images.xcassets in Resources */,
-				C9709435183B053300264B6D /* InfoPlist.strings in Resources */,
 				C970943E183B053300264B6D /* Main.storyboard in Resources */,
 				C94C26FB198226E70065ACE8 /* ivak_Decorative_Sun.png in Resources */,
 				C94C26F9198226340065ACE8 /* heavy-rain-98539_150.png in Resources */,
+				C9EEA0C219992E8400389853 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +321,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9709454183B053300264B6D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,28 +367,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9709433183B053300264B6D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9709434183B053300264B6D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		C970943C183B053300264B6D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C970943D183B053300264B6D /* Base */,
+				C9EEA0BE19992DEE00389853 /* en */,
+				C9EEA0BF19992DF400389853 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C9709452183B053300264B6D /* InfoPlist.strings */ = {
+		C9EEA0C419992E8400389853 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C9709453183B053300264B6D /* en */,
+				C9EEA0C519992EB600389853 /* en */,
+				C9EEA0C619992F6A00389853 /* ja */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
