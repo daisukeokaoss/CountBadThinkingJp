@@ -73,8 +73,8 @@
     //「履歴」ボタンの設定
     self.HistoryButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#228b22"];
     self.HistoryButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
-    self.HistoryButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];;
-    [self.HistoryButton setFlatTitle:@"履歴"];
+    self.HistoryButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    [self.HistoryButton setFlatTitle:NSLocalizedString(@"History", nil)];
     [self.HistoryButton setFlatImage:nil];
     
     AppDelegate *appdelegate;
@@ -95,6 +95,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     //「悪い考えは●回浮かびました」を表示
+    
     self.PlotBadThoughtCountLabel.text = [NSString stringWithFormat:@"今日悪い考えは%d回浮かびました",[self CheckAndCountTodaysBadthoughtCount]];
 }
 
