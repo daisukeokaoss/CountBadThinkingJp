@@ -9,7 +9,9 @@
 #import "HistoryPlotViewController.h"
 
 @interface HistoryPlotViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ReturnButton;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *EditButton;
 
 
 //以下、OneTapRecordPlotViewControllerに伝達するためのプロパティ

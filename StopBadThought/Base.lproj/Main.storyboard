@@ -171,6 +171,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="EditButton" destination="Q2k-Bf-UwO" id="5EQ-yA-qS0"/>
+                        <outlet property="ReturnButton" destination="ZW8-tx-Tzi" id="lfl-I4-lcM"/>
                         <segue destination="NPr-F6-W9H" kind="modal" identifier="ShowOneTapRecordPlot" id="C9F-ab-AWN"/>
                     </connections>
                 </tableViewController>
