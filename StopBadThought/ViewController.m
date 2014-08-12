@@ -36,18 +36,38 @@
     //「嫌な考えが浮かんだら押してください！！」ボタンの設定
     self.CountButtn.buttonBackgroundColor = [UIColor colorWithHexString:@"#dc143c"];
     self.CountButtn.buttonForegroundColor = [UIColor colorWithRed:255.0f/255.0f green:246.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
-    self.CountButtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:15.0f];
+
     self.CountButtn.titleLabel.numberOfLines = 2;
     self.CountButtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.CountButtn setFlatTitle:@"嫌な考えが浮かんだら押してください!!"];
+    
+    ////////////////////////////////////////////////////
+    //ローカライズ
+    bool isJapanese;
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    isJapanese = [currentLanguage compare:@"ja"] == NSOrderedSame;
+    if(isJapanese == YES){
+          self.CountButtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:15.0f];
+    }else{
+          self.CountButtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:15.0f];
+    }
+    
+    
+    
+    
+    [self.CountButtn setFlatTitle:NSLocalizedString(@"Press Button if Bad Thought Come Across", nil)];
     [self.CountButtn setFlatImage:nil];
     
     //「設定」ボタンの設定
     self.SettingButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#77d7ff"];
     self.SettingButton.buttonForegroundColor = [UIColor colorWithHexString:@"#2b2b2b"];
-    self.SettingButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    if(isJapanese == YES){
+              self.SettingButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    }else{
+              self.SettingButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    }
     
-    [self.SettingButton setFlatTitle:@"設定"];
+    [self.SettingButton setFlatTitle:NSLocalizedString(@"Setting", nil)];
     [self.CountButtn setFlatImage:nil];
     
     //「履歴」ボタンの設定
