@@ -348,6 +348,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </view>
                     <connections>
                         <outlet property="LicenseTextView" destination="qRg-xm-dSB" id="hnQ-1n-QyV"/>
+                        <outlet property="ReturnButton" destination="TAg-yp-JGt" id="fNu-is-SsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMY-oa-9Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -467,6 +468,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <outlet property="MoodScale" destination="Z2x-Ks-oQf" id="i0e-Bp-MWu"/>
                         <outlet property="RecordButton" destination="DLi-BG-ldZ" id="UR4-Rg-aSs"/>
                         <outlet property="ThinkingDicription" destination="dZt-Te-8UB" id="q7H-o5-iG6"/>
+                        <outlet property="idoLabel" destination="NcN-Cb-akS" id="ZGm-DM-aZB"/>
+                        <outlet property="keidoLabel" destination="Jz8-jz-VLP" id="TTL-Vo-zAV"/>
                         <outlet property="latLabel" destination="fGO-JT-W4L" id="svr-x5-E9e"/>
                         <outlet property="lonLabel" destination="soN-1Y-PuI" id="at7-G8-Je4"/>
                         <outlet property="mv" destination="8eJ-FO-Ml5" id="AhQ-KB-Urq"/>

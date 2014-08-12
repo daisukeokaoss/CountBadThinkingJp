@@ -20,7 +20,9 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *MoodScale;
 
+@property (weak, nonatomic) IBOutlet UILabel *idoLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *keidoLabel;
 
 @end
 
@@ -64,19 +66,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    bool isJapanese;
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    isJapanese = [currentLanguage compare:@"ja"] == NSOrderedSame;
+    
+    
 	// Do any additional setup after loading the view.
     self.ThinkingDicription.layer.borderColor = [UIColor blackColor].CGColor;
     self.ThinkingDicription.layer.borderWidth = 1;
     
     self.RecordButton.buttonBackgroundColor = [UIColor colorWithHexString:@"#FF0000"]; //[UIColor colorWithHue:0.0f saturation:0.0f brightness:0.60f alpha:1.0f];
     self.RecordButton.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
-    self.RecordButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
-    [self.RecordButton setFlatTitle:@"記録"];
+    if(isJapanese == true){
+            self.RecordButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+    }else{
+        self.RecordButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    }
+    
+    [self.RecordButton setFlatTitle:NSLocalizedString(@"Record", nil)];
     
     self.CancelJSFlatButton.buttonBackgroundColor = [UIColor colorWithRed:0.99f green:0.99f blue:0.00f alpha:1.00f];
     self.CancelJSFlatButton.buttonForegroundColor = [UIColor colorWithRed:0.99f green:0.00f blue:0.00f alpha:1.00f];
     self.CancelJSFlatButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
-    [self.CancelJSFlatButton setFlatTitle:@"キャンセル"];
+    
+    [self.CancelJSFlatButton setFlatTitle:NSLocalizedString(@"Calcel", nil)];
     
     NSString *localeIdentifier = [[NSLocale currentLocale] localeIdentifier];
     
@@ -92,6 +107,17 @@
     self.DataTimeLabel.text = strNow;
     
     //[self SetUpLocation];
+
+    if(isJapanese == YES){
+        self.keidoLabel.font = [UIFont systemFontOfSize:17];
+        self.idoLabel.font   = [UIFont systemFontOfSize:17];
+    }else{
+        self.keidoLabel.font = [UIFont systemFontOfSize:14];
+        self.idoLabel.font   = [UIFont systemFontOfSize:14];
+    }
+    
+    self.keidoLabel.text = NSLocalizedString(@"Long:", nil);
+    self.idoLabel.text   = NSLocalizedString(@"Lat:", nil);
     
     
     //ロケーションマネージャセットアップ
@@ -174,6 +200,7 @@
     
     MKPointAnnotation *cur = [[MKPointAnnotation alloc] init];
     cur.title = @"現在位置";
+    
 
     cur.coordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     [self.mv showAnnotations:@[cur] animated:NO];
