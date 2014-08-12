@@ -95,8 +95,8 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     //「悪い考えは●回浮かびました」を表示
-    
-    self.PlotBadThoughtCountLabel.text = [NSString stringWithFormat:@"今日悪い考えは%d回浮かびました",[self CheckAndCountTodaysBadthoughtCount]];
+    self.PlotBadThoughtCountLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Bad thought come across %d times", nil),
+                                          [self CheckAndCountTodaysBadthoughtCount]];
 }
 
 -(void)viewDidDisappear:(BOOL)animated
